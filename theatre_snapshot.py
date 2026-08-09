@@ -32,8 +32,8 @@ def main():
     today = date.today().isoformat()
     ok, fail = 0, 0
     for s in cfg["sources"]:
-        if s.get("login_walled"):
-            continue
+        if s.get("login_walled") or s.get("cloud") is False:
+            continue  # local-leg-only sources (JS-walled or blocks datacenter IPs)
         name = re.sub(r"[^a-z0-9]+", "-", s["name"].lower()).strip("-")
         try:
             req = urllib.request.Request(s["url"], headers=UA)

@@ -1,9 +1,9 @@
 {
   "_note": "Human-maintained source list for the theatre sweep (seeded 2026-08-09 by the build; edit freely — the sweep never overwrites this file). check: daily|weekly. login_walled sources are surfaced as 'check manually' only.",
   "sources": [
-    {"name": "Playbill Casting & Jobs", "url": "https://playbill.com/job/list?category=Performer", "check": "daily", "login_walled": false},
+    {"name": "Playbill Casting & Jobs", "url": "https://playbill.com/job/list?category=Performer", "check": "daily", "login_walled": false, "cloud": false, "note": "JS-rendered + 404s Actions runners — local web_fetch only; skip if shell returned"},
     {"name": "BroadwayWorld Auditions (non-Equity)", "url": "https://www.broadwayworld.com/classifieds/", "check": "daily", "login_walled": false},
-    {"name": "OffStageJobs (perf + staff)", "url": "https://www.offstagejobs.com/jobsearch.php", "check": "weekly", "login_walled": false},
+    {"name": "OffStageJobs (perf + staff)", "url": "https://offstagejobs.com/jobsearch.php", "check": "weekly", "login_walled": false, "note": "cert only valid without www"},
     {"name": "Backstage — MT calls", "url": "https://www.backstage.com/casting/open-casting-calls/", "check": "weekly", "login_walled": true},
     {"name": "A1 Conference", "url": "https://www.thea1auditions.com/", "check": "weekly", "login_walled": false},
     {"name": "SETC Auditions", "url": "https://www.setc.org/auditions/", "check": "weekly", "login_walled": false},

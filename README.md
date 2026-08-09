@@ -14,7 +14,7 @@ Stagehand. No secrets, no tokens, no LLM calls here.
 ## How Stagehand consumes it
 The 06:45 morning refresh fetches (via web_fetch, which CAN reach
 raw.githubusercontent.com even though the sandbox shell can't):
-  `https://raw.githubusercontent.com/<YOU>/stagehand-sweeps/main/discovered/discovered-<date>.json`
+  `https://raw.githubusercontent.com/PrestonScott05/stagehand-sweeps/master/discovered/discovered-<date>.json`
 and the day's snapshots, then merges/parses locally. Machine off for N days →
 next wake processes N days of files. Nothing is lost, only delayed.
 

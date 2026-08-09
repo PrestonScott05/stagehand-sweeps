@@ -53,6 +53,10 @@ HREF_RE = re.compile(r'href="([^"]+)"')
 MD_LINK_RE = re.compile(r'\[([^\]]*)\]\(([^)]+)\)')
 TAG_RE = re.compile(r"<[^>]+>")
 AGE_RE = re.compile(r"^(\d+)\s*(d|h|mo)$", re.I)
+MONTHS = {m: i + 1 for i, m in enumerate(
+    ["jan", "feb", "mar", "apr", "may", "jun",
+     "jul", "aug", "sep", "oct", "nov", "dec"])}
+DATE_RE = re.compile(r"^([A-Za-z]{3,9})\s+(\d{1,2})$")  # vanshb03: "Aug 06"
 
 
 def fetch(url):
@@ -80,15 +84,31 @@ def cell_url(cell):
 
 
 def parse_age_days(text):
-    m = AGE_RE.match(text.strip())
-    if not m:
-        return None
-    n, unit = int(m.group(1)), m.group(2).lower()
-    if unit == "h":
-        return 0
-    if unit == "mo":
-        return n * 30
-    return n
+    text = text.strip()
+    m = AGE_RE.match(text)
+    if m:
+        n, unit = int(m.group(1)), m.group(2).lower()
+        if unit == "h":
+            return 0
+        if unit == "mo":
+            return n * 30
+        return n
+    # "Aug 06" style (vanshb03 Date Posted column) — relative to today,
+    # rolling back a year if the date would land in the future.
+    m = DATE_RE.match(text)
+    if m:
+        mon = MONTHS.get(m.group(1)[:3].lower())
+        if not mon:
+            return None
+        today = date.today()
+        try:
+            d = date(today.year, mon, int(m.group(2)))
+        except ValueError:
+            return None
+        if d > today:
+            d = date(today.year - 1, mon, int(m.group(2)))
+        return (today - d).days
+    return None
 
 
 def norm_url(u):
