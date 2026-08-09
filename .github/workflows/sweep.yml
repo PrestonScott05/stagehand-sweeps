@@ -1,0 +1,33 @@
+name: stagehand-daily-sweep
+on:
+  schedule:
+    - cron: "30 10 * * *"   # 10:30 UTC = 05:30 CDT / 04:30 CST — before the 06:45 local refresh
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: CS tracker discovery
+        run: python discover.py --out discovered --no-seen-update --max-age 3
+        # --max-age 3: daily cadence needs only the freshest rows; the local
+        # merge dedupes anyway. seen-file lives locally, not in this repo.
+
+      - name: Theatre source snapshots
+        run: python theatre_snapshot.py
+
+      - name: Commit results
+        run: |
+          git config user.name "stagehand-sweep"
+          git config user.email "actions@users.noreply.github.com"
+          git add discovered snapshots
+          git diff --cached --quiet || git commit -m "sweep $(date -u +%F)"
+          git push
