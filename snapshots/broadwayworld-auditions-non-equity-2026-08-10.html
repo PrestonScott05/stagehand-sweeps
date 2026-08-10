@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="en" data-bww-theme="light">
+<head>
+<script>window.BWW_THEME_CFG={"version":"540","cookieName":"BWW_THEME","lsKey":"bww_theme"};</script><script>(function (w, d) {
+  var cfg = w.BWW_THEME_CFG || {};
+  var h = d.documentElement;
+  var v = cfg.version || '330';
+  var cn = cfg.cookieName || 'BWW_THEME';
+  var lk = cfg.lsKey || 'bww_theme';
+  var prefAttr = h.getAttribute('data-bww-theme-pref');
+  var sess = h.getAttribute('data-bww-theme-session') === '1';
+
+  try {
+    if (w.localStorage) {
+      w.localStorage.removeItem('bww_darkboard');
+    }
+  } catch (e) {}
+
+  function themeCk() {
+    var ckRe = new RegExp('(?:^|;\\s*)' + cn + '=(\\d)');
+    return d.cookie.match(ckRe);
+  }
+
+  function getPref() {
+    if (prefAttr === '0' || prefAttr === '1' || prefAttr === '2') {
+      return prefAttr;
+    }
+    var ck = themeCk();
+    if (ck && (ck[1] === '0' || ck[1] === '1' || ck[1] === '2')) {
+      return ck[1];
+    }
+    return null;
+  }
+
+  function autoIsDark() {
+    var hour = new Date().getHours();
+    return hour >= 19 || hour < 7;
+  }
+
+  function resolveDark(pref) {
+    if (pref === '1') {
+      return true;
+    }
+    if (pref === '2') {
+      return autoIsDark();
+    }
+    if (pref === '0') {
+      return false;
+    }
+
+    var ck = themeCk();
+    if (ck) {
+      if (ck[1] === '1') {
+        return true;
+      }
+      if (ck[1] === '2') {
+        return autoIsDark();
+      }
+      if (ck[1] === '0') {
+        return false;
+      }
+    }
+
+    try {
+      var ls = w.localStorage && w.localStorage.getItem(lk);
+      if (ls === '1') {
+        return true;
+      }
+      if (ls === '0') {
+        return false;
+      }
+    } catch (err) {}
+
+    return false;
+  }
+
+  function loadDark() {
+    if (!d.getElementById('bww-darkboard-css')) {
+      var link = d.createElement('link');
+      link.id = 'bww-darkboard-css';
+      link.rel = 'stylesheet';
+      link.href = '/bworld1523/design-system/bww-darkboard.min.css?v=' + v;
+      d.head.appendChild(link);
+    }
+  }
+
+  function unloadDark() {
+    var link = d.getElementById('bww-darkboard-css');
+    if (link && link.parentNode) {
+      link.parentNode.removeChild(link);
+    }
+  }
+
+  function applyTheme(isDark) {
+    h.setAttribute('data-bww-theme', isDark ? 'dark' : 'light');
+    if (isDark) {
+      loadDark();
+    } else {
+      unloadDark();
+    }
+    try {
+      if (w.localStorage) {
+        w.localStorage.setItem(lk, isDark ? '1' : '0');
+      }
+    } catch (err) {}
+  }
+
+  function msUntilNextSwitch() {
+    var now = new Date();
+    var hour = now.getHours();
+    var next = new Date(now);
+    next.setSeconds(0, 0);
+    next.setMilliseconds(0);
+
+    if (hour >= 19 || hour < 7) {
+      if (hour >= 19) {
+        next.setDate(next.getDate() + 1);
+      }
+      next.setHours(7, 0, 0, 0);
+    } else {
+      next.setHours(19, 0, 0, 0);
+    }
+
+    return Math.max(0, next.getTime() - now.getTime());
+  }
+
+  var autoTimer = null;
+  function scheduleAutoTheme() {
+    if (autoTimer) {
+      w.clearTimeout(autoTimer);
+    }
+    autoTimer = w.setTimeout(function () {
+      applyTheme(autoIsDark());
+      scheduleAutoTheme();
+    }, msUntilNextSwitch());
+  }
+
+  var pref = getPref();
+  var isDark = resolveDark(pref);
+
+  if (sess && pref !== null) {
+    applyTheme(isDark);
+    if (pref === '2') {
+      scheduleAutoTheme();
+    }
+    return;
+  }
+
+  if (pref === '0') {
+    applyTheme(false);
+    return;
+  }
+
+  if (pref === '2') {
+    applyTheme(isDark);
+    scheduleAutoTheme();
+    return;
+  }
+
+  if (isDark) {
+    applyTheme(true);
+  }
+})(window, document);
+</script><!-- Google Tag Manager -->
+<script>
+  window['gtag_enable_tcf_support'] = true;
+  window.dataLayer = window.dataLayer || [];
+  (function(w,d,s,l,i){
+    w[l]=w[l]||[];
+    w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),
+        dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P3NJDWD');
+</script>
+<!-- End Google Tag Manager -->
+
+
+    
+                    <title>Broadway Jobs + Theatre Classifieds | BroadwayWorld</title>
+          <meta name="sppc-site-verification" content="7b427ebce326f82c28d2344fb76fec2b" />
+
+    
+          
+                    <meta name="description" content="Find theatre jobs and classifieds on BroadwayWorld. Browse job listings for actors, stage managers, designers, crew, and more in New York City and beyond.">
+                    
+          <link rel="canonical" href="https://www.broadwayworld.com/classifieds-jobs/">
+          <link rel="alternate" type="application/rss+xml" title="BroadwayWorld RSS Feed" href="https://www.broadwayworld.com/feed_all_bway.php" />
+
+
+          <meta property="fb:pages" content="126634689416" />
+
+          <meta property="og:title" content="Broadway Jobs + Theatre Classifieds | BroadwayWorld" />
+          <meta property="og:description" content="Find theatre jobs and classifieds on BroadwayWorld. Browse job listings for actors, stage managers, designers, crew, and more in New York City and beyond." />
+          <meta property="og:url" content="https://www.broadwayworld.com/classifieds-jobs/" />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="BroadwayWorld" />
+                
+      
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://cloudimages.broadwayworld.com" crossorigin>
+<link rel="preconnect" href="https://cloudimages2.broadwayworld.com" crossorigin>
+<link rel="preconnect" href="https://securepubads.g.doubleclick.net" crossorigin>
+<link rel="preconnect" href="https://scripts.mediavine.com" crossorigin>
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://www.broadwayworld.com/static/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.broadwayworld.com/static/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www.broadwayworld.com/static/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.broadwayworld.com/static/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://www.broadwayworld.com/static/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://www.broadwayworld.com/static/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://www.broadwayworld.com/static/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://www.broadwayworld.com/static/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="https://www.broadwayworld.com/static/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="https://www.broadwayworld.com/static/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://www.broadwayworld.com/static/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://www.broadwayworld.com/static/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://www.broadwayworld.com/static/favicon-128.png" sizes="128x128">
+
+ <script src="https://scripts.mediavine.com/shims/broadway-world/pubadsShim.min.js"></script>
+<script
+  async
+  data-noptimize="1"
+  data-cfasync="false"
+  src="https://scripts.mediavine.com/tags/broadway-world.js"
+  id="mv-script-wrapper-js"
+></script>
+<script data-cfasync="false">
+document.addEventListener("DOMContentLoaded", function() {
+  let pageCount = sessionStorage.getItem('pageCount');
+  if(pageCount) {
+    pageCount = parseInt(pageCount) + 1;
+  } else {
+  pageCount = 1;
+  }
+  sessionStorage.setItem('pageCount', pageCount);
+});
+</script>
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+  <script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+  </script>
+
+  <script>
+      googletag.cmd.push(function() { googletag.defineSlot('/106293300/CountdownClock', [300,175], 'div-gpt-ad-1442371043694-CountdownClock').addService(googletag.pubads()).setCollapseEmptyDiv(true,true);
+
+      googletag.defineSlot('/106293300/Pixel1x1', [1, 1], 'div-gpt-ad-1479672818651-pix11').addService(googletag.pubads());
+googletag.defineOutOfPageSlot('/106293300/out-of-page-ad', 'out-of-page-ad').addService(googletag.pubads());
+
+           
+        googletag.defineSlot('/106293300/BWW_Mobile_A', [[300,250],[336,280]], 'div-gpt-ad-1442371043694-8').addService(googletag.pubads());
+        googletag.defineSlot('/106293300/BWW_Mobile_B', [[300,250],[336,280]], 'div-gpt-ad-1442371043694-9').addService(googletag.pubads());
+        googletag.defineSlot('/106293300/BWW_Mobile_C', [[300,250],[336,280]], 'div-gpt-ad-1442371043694-10').addService(googletag.pubads());
+
+googletag.defineSlot('/106293300/BWW_Desktop_Sidebar_Top', [[300,250]], 'div-gpt-ad-1442371043694-0').addService(googletag.pubads());
+googletag.defineSlot('/106293300/BWW_Desktop_Sidebar_Mid', [[300,1050],[300,600],[300,25],[160,600]], 'div-gpt-ad-1442371043694-3').addService(googletag.pubads());
+googletag.defineSlot('/106293300/BWW_Desktop_Sidebar_Bottom',  [[300,250]], 'div-gpt-ad-1442371043694-4').addService(googletag.pubads());
+  googletag.defineSlot('/106293300/BWW_Desktop_Header', [[970,90],[970,66],[728,90],[970,250]], 'div-gpt-ad-1442371043694-1').addService(googletag.pubads());
+    googletag.defineSlot('/106293300/BWW_Desktop_Sticky_Tower', [160, 600], 'div-gpt-ad-1442371043694-2').addService(googletag.pubads());
+      googletag.defineSlot('/106293300/BWW_Mobile_Header', [[300,250],[320,50],[320,100]], 'div-gpt-ad-1442371043694-7').addService(googletag.pubads());
+      googletag.defineSlot('/106293300/BWW_Mobile_AuthorInclude',  [[300,250],[336,280]], 'div-gpt-ad-1442371043694-11').addService(googletag.pubads());
+ googletag.defineSlot('/106293300/New728468Bottom', [728, 90], 'div-gpt-ad-1479672818651-New728468Bottom').addService(googletag.pubads());
+      googletag.defineSlot('/106293300/NEW300MOBILE', [[300, 250], [336, 280]], 'div-gpt-ad-1479672818651-NEW300MOBILE').addService(googletag.pubads());
+      googletag.defineSlot('/106293300/NEW300D', [300, 250], 'div-gpt-ad-1442371043694-5').addService(googletag.pubads());
+    
+
+          googletag.pubads().setTargeting('Region','classifieds-jobs');            
+                      
+
+
+    
+
+
+                                            
+
+            
+                
+    let pageCount = sessionStorage.getItem('pageCount');
+
+pageCount = pageCount ? parseInt(pageCount) : 0;
+
+let referrer = document.referrer;
+
+if (referrer.includes("google")) {
+    googletag.pubads().setTargeting('pagecount', '0');
+} else if (pageCount <= 1) {
+    googletag.pubads().setTargeting('pagecount', '1');
+} else {
+    googletag.pubads().setTargeting('pagecount', '2');
+}
+    googletag.pubads().collapseEmptyDivs();
+            googletag.pubads().enableSingleRequest();
+
+    googletag.enableServices();
+  });
+</script>
+
+
+ <script data-cfasync="false">!function(n){if(!window.cnx){window.cnx={},window.cnx.cmd=[];var t=n.createElement('iframe');t.src='javascript:false'; t.display='none',t.onload=function(){var n=t.contentWindow.document,c=n.createElement('script');c.src='//cd.connatix.com/connatix.player.js?cid=81bd3014-14af-4d51-b524-e3719a43b0b8',c.setAttribute('async','1'),c.setAttribute('type','text/javascript'),n.body.appendChild(c)},n.head.appendChild(t)}}(document);</script>
+
+<link href="/bworld1523/assets/css/bootstrap-slim.min.css?v=4" rel="stylesheet">
+<style id="bww-critical-chrome">#bww-search-overlay:not(.is-open){display:none!important;visibility:hidden!important;pointer-events:none!important}[hidden]{display:none!important}</style>
+
+<link rel="preload" href="https://cloudimages.broadwayworld.com/fonts/poppins-v24-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://cloudimages.broadwayworld.com/fonts/poppins-v24-latin_latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="/bworld1523/design-system/tokens.css?v=9">
+<link rel="stylesheet" href="/bworld1523/design-system/bww-core.min.css?v=540">
+<link rel="stylesheet" href="/bworld1523/design-system/bww-classifieds.min.css?v=540">
+<link rel="stylesheet" href="/bworld1523/design-system/bww-regional.min.css?v=540">
+<link rel="preload" href="/bworld1523/assets/css/search-header.css?v=20260619" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/bworld1523/assets/css/search-header.css?v=20260619"></noscript>
+
+<script data-cfasync="false">
+function bwwRestoreMobileAccountMenuPortal(accountLi) {
+  var menu = document.querySelector('ul.bww-account-menu-portal');
+  if (!menu || !accountLi) return;
+  menu.classList.remove('bww-account-menu-portal');
+  menu.removeAttribute('style');
+  accountLi.appendChild(menu);
+}
+function bwwPositionMobileAccountMenu(accountLi) {
+  if (window.innerWidth > 768 || !accountLi) return;
+  var headerBottom = document.querySelector('.header-bottom.bww-site-header');
+  if (!headerBottom || headerBottom.classList.contains('mobile-header-bottom')) return;
+  var menu = accountLi.querySelector('.submenu.dropdown-menu, .dropdown-menu');
+  if (!menu) return;
+  if (!menu.classList.contains('bww-account-menu-portal')) {
+    menu.classList.add('bww-account-menu-portal');
+    document.body.appendChild(menu);
+  }
+  var top = Math.round(headerBottom.getBoundingClientRect().bottom);
+  menu.style.position = 'fixed';
+  menu.style.top = top + 'px';
+  menu.style.right = '0px';
+  menu.style.left = 'auto';
+  menu.style.bottom = 'auto';
+  menu.style.width = 'min(280px, 100vw)';
+  menu.style.minWidth = '220px';
+  menu.style.maxWidth = '100vw';
+  menu.style.margin = '0';
+  menu.style.transform = 'none';
+  menu.style.inset = 'auto 0 auto auto';
+  menu.style.zIndex = '10070';
+}
+function bwwResetMobileAccountMenu() {
+  var accountLi = document.querySelector('.login-menu #account > li');
+  if (!accountLi) return;
+  accountLi.classList.remove('bww-account-open');
+  var accountLink = accountLi.querySelector('a[data-bs-toggle="dropdown"]');
+  if (accountLink) accountLink.setAttribute('aria-expanded', 'false');
+  bwwRestoreMobileAccountMenuPortal(accountLi);
+}
+function bwwToggleMobileNav(e) {
+  if (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  var headerBottom = document.querySelector('.header-bottom');
+  if (!headerBottom) return;
+  var isOpen = headerBottom.classList.toggle('mobile-header-bottom');
+  document.body.classList.toggle('bww-mobile-nav-open', isOpen);
+  if (!isOpen) {
+    bwwResetMobileAccountMenu();
+    if (window.BWWJrNav && window.BWWJrNav.close) window.BWWJrNav.close();
+    var openExplore = document.querySelector('.open-explore');
+    if (openExplore) openExplore.classList.remove('show');
+    if (window.BWWExploreNav && window.BWWExploreNav.reset) window.BWWExploreNav.reset();
+    return;
+  }
+  bwwResetMobileAccountMenu();
+  var openExplore = document.querySelector('.open-explore');
+  if (openExplore) openExplore.classList.remove('show');
+  if (window.BWWExploreNav && window.BWWExploreNav.reset) window.BWWExploreNav.reset();
+  if (window.bwwLoadExploreShell) window.bwwLoadExploreShell();
+}
+function myFunction() { bwwToggleMobileNav(); }
+document.addEventListener('click', function(e) {
+  if (window.innerWidth > 768) return;
+  var accountToggle = e.target.closest('.login-menu #account > li > a[data-bs-toggle="dropdown"]');
+  if (accountToggle) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    var accountLi = accountToggle.closest('li');
+    if (!accountLi) return;
+    var willOpen = !accountLi.classList.contains('bww-account-open');
+    bwwResetMobileAccountMenu();
+    if (willOpen) {
+      accountLi.classList.add('bww-account-open');
+      accountToggle.setAttribute('aria-expanded', 'true');
+      bwwPositionMobileAccountMenu(accountLi);
+    }
+    return;
+  }
+  if (!e.target.closest('.login-menu #account > li') && !e.target.closest('ul.bww-account-menu-portal')) {
+    bwwResetMobileAccountMenu();
+  }
+}, true);
+</script>
+
+
+
+<script src="/api/sidebar-signup-margin.js.php" defer></script>
+<script src="/bworld1523/design-system/bww-affiliate-links.js?v=1786282243" defer></script>
+<script src="/bworld1523/design-system/bww-light-newsletter.js?v=1786282243" defer></script>
+</head>
+<body class="" >
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3NJDWD"
+height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a href="#main-content" class="bww-skip-link">Skip to main content</a>
+<img src="https://data.broadwayworld.com/sitepixel.php" width="1" height="1" alt="" role="presentation" style="display:none;" loading="eager" decoding="async">
+<div class="w-container">
+
+<div id="div-gpt-ad-1479672818651-pix11">
+    <script>googletag.cmd.push(function () {
+            googletag.display('div-gpt-ad-1479672818651-pix11');
+        });
+    </script>
+</div>
+
+
+
+
+    
+
+
+    <header>
+      <!-- Header Start -->
+      <div class="header-area">
+        <div class="main-header ">
+          <div class="header-mid d-none d-md-block">
+            <div class="container">
+              <div class="row d-flex align-items-center" >
+             
+ <div style="text-align:center;">
+  <table role="presentation" style="max-width:100%;width:100%;margin-bottom:5px;margin-top:5px;">
+  <tr><td style="text-align:left;width:35%">
+
+    <a href="https://www.broadwayworldshop.com?utm_source=broadwayworld&utm_medium=referral&utm_campaign=header_shop_merch&utm_content=shop_merch_btn" target="_blank"><button type="submit" class="btn register-btn btn-register-red"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;margin-top:-2px;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>Shop Merch</button></a>  
+    
+
+
+               
+        <a href="https://www.broadwayworld.com/addyourshow.php"><button type="submit" class="btn register-btn btn-register-dark">Add a Show Listing</button> </a>
+              
+    
+
+
+  </td>
+  <td style="text-align:center;width:30%;">
+     <div class="logo bww-regional-brand">
+        <a href="https://www.broadwayworld.com/" class="bww-regional-brand__logo">
+             <img class="img" src="https://cloudimages2.broadwayworld.com/2017/broadwayworld-new-retina.png" alt="BroadwayWorld" width="133" height="80">
+   
+   
+        </a>
+        <a href="https://www.broadwayworld.com/classifieds-jobs/" class="bww-regional-brand__name"></a>
+            </div>
+  </td>
+
+  <td style="text-align:right;width:35%;">
+    
+        <form style="float:right;" action="https://www.broadwayworld.com/register.php?tracker=Top2023" method="post" onSubmit="gtag('event', 'Register', {'event_category': 'Register','event_label': 'Top 2023','value': 'Top 2023'});">
+        <input name="regionalnews" value="" type="hidden">
+        
+    <table role="presentation">
+        <tr>
+
+            <td style="padding-right:8px;">
+                <input type="email" id="header-email-desktop" name="email" placeholder="your@email.com" aria-label="Email address for newsletter signup" style="font-size:12px;max-width:200px;" required class="form-control">
+            </td>
+            <td style="padding-right:8px;">
+                <button type="submit" class="btn register-btn btn-register-light">Sign-up</button>
+            </td>
+            <td><a href="https://www.broadwayworld.com/myshows/join.php"><div class="btn register-btn btn-register-red">My Shows</div></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <span style="font-size:9pt;font-weight:bold;">News on your favorite shows, specials & more!</span>
+            </td>
+            
+        </tr>
+    </table>
+</form>
+
+
+
+
+
+   
+  </td>
+  </tr>
+</table>
+
+                <div id="ezoic-pub-ad-placeholder-102">
+                    <div id='div-gpt-ad-1442371043694-1' style='width:970px;'>
+                        <script>
+                            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1442371043694-1'); });
+                        </script>
+                    </div>
+                </div>
+</div>
+                
+         <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                  <div class="header-banner f-right">
+   
+
+</div>
+
+
+</div>
+                
+                
+           
+                
+              </div>
+            </div>
+          </div>
+          
+                     
+        <div id="out-of-page-ad">
+     <script data-cfasync="false" async>
+        googletag.cmd.push(function() {
+          googletag.display('out-of-page-ad');
+        });
+      </script>
+    </div>  
+    
+          <div class="header-bottom header-sticky bww-site-header">
+            <div class="container">
+              <div class="row align-items-center" style="background-color:#222;">
+                <div class="col-xl-2 col-md-2 category-menu">
+                  
+                 
+                  <!--EXPLORE Buton-->
+             <nav class="navbar navbar-light light-blue lef-navbar" aria-label="Region explorer">
+  <button class="navbar-toggler toggler-example" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="exploreButton">
+    <span class="navbar-brand">EXPLORE REGIONS</span>
+  </button>
+</nav>
+                  <!--/.EXPLORE End-->
+                </div>
+              <!---- start me ----><div class="row mx-0"><div class="col-xl-2 col-md-2 collapse open-explore" id="collapseExample"><nav><ul class="submenu"><li class="explore-category-item"><button type="button" class="explore-category-btn" data-bww-explore-cat aria-expanded="false">Broadway + NYC</button><i class="carousel-control-next-icon next-icon" aria-hidden="true"></i><div class="explore-mega-menu bww-explore-panel"><button type="button" class="close-mega-menu" aria-label="Close menu"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></button><div class="container-fluid"><div class="row"><div class="megamenu-title"><p class="megamenu-title" style="color:white;">Broadway + NYC</p></div><div class="explore-us-stories-grid"><div class="single explore-story"><p class="h5"><a href="https://www.broadwayworld.com/">Broadway</a></p><div class="explore-card-slot" data-slot="bway-broadway"></div></div><div class="single explore-story"><p class="h5"><a href="https://www.broadwayworld.com/off-broadway/">Off-Broadway</a></p><div class="explore-card-slot" data-slot="bway-off-broadway"></div></div><div class="single explore-story"><p class="h5"><a href="https://www.broadwayworld.com/off-off-broadway/">Off-Off Broadway</a></p><div class="explore-card-slot" data-slot="bway-off-off-broadway"></div></div><div class="single explore-story"><p class="h5"><a href="https://www.broadwayworld.com/cabaret/">Cabaret</a></p><div class="explore-card-slot" data-slot="bway-cabaret"></div></div><div class="single explore-story"><p class="h5"><a href="https://www.broadwayworld.com/bwwdance/">Dance</a></p><div class="explore-card-slot" data-slot="bway-dance"></div></div><div class="single explore-story"><p class="h5"><a href="https://www.broadwayworld.com/bwwopera/">Opera</a></p><div class="explore-card-slot" data-slot="bway-opera"></div></div><div class="single explore-story"><p class="h5"><a href="https://www.broadwayworld.com/bwwclassical/">Classical Music</a></p><div class="explore-card-slot" data-slot="bway-classical"></div></div></div></div></div></div></li><li class="explore-category-item"><button type="button" class="explore-category-btn" data-bww-explore-cat aria-expanded="false">United States</button><i class="carousel-control-next-icon next-icon" aria-hidden="true"></i><div class="explore-mega-menu bww-explore-panel explore-mega-menu--us"><button type="button" class="close-mega-menu" aria-label="Close menu"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></button><div class="container-fluid"><div class="row"><div class="d-flex explore-us-regions"><div class="megamenu-title"><p class="megamenu-title" style="color:white;"></p></div><div class="explore-us-region-group"><button type="button" class="explore-us-region-btn" data-bww-us-region aria-expanded="false">Eastern</button><ul class="explore-us-region-list united-dropdown"><li><a href="https://www.broadwayworld.com/connecticut/"><span class="explore-us-link__state">CONNECTICUT</span><span class="explore-us-link__city">Connecticut</span></a></li><li><a href="https://www.broadwayworld.com/washington-dc/"><span class="explore-us-link__state">DC</span><span class="explore-us-link__city">Washington, DC</span></a></li><li><a href="https://www.broadwayworld.com/delaware/"><span class="explore-us-link__state">DELAWARE</span><span class="explore-us-link__city">Delaware</span></a></li><li><a href="https://www.broadwayworld.com/ft-myers-naples/"><span class="explore-us-link__state">FLORIDA</span><span class="explore-us-link__city">Ft. Myers/Naples</span></a></li><li><a href="https://www.broadwayworld.com/jacksonville/"><span class="explore-us-link__state">FLORIDA</span><span class="explore-us-link__city">Jacksonville</span></a></li><li><a href="https://www.broadwayworld.com/miami/"><span class="explore-us-link__state">FLORIDA</span><span class="explore-us-link__city">Miami Metro</span></a></li><li><a href="https://www.broadwayworld.com/orlando/"><span class="explore-us-link__state">FLORIDA</span><span class="explore-us-link__city">Orlando</span></a></li><li><a href="https://www.broadwayworld.com/sarasota/"><span class="explore-us-link__state">FLORIDA</span><span class="explore-us-link__city">Sarasota</span></a></li><li><a href="https://www.broadwayworld.com/tallahassee/"><span class="explore-us-link__state">FLORIDA</span><span class="explore-us-link__city">Tallahassee</span></a></li><li><a href="https://www.broadwayworld.com/tampa/"><span class="explore-us-link__state">FLORIDA</span><span class="explore-us-link__city">Tampa/St. Petersburg</span></a></li><li><a href="https://www.broadwayworld.com/atlanta/"><span class="explore-us-link__state">GEORGIA</span><span class="explore-us-link__city">Atlanta</span></a></li><li><a href="https://www.broadwayworld.com/maine/"><span class="explore-us-link__state">MAINE</span><span class="explore-us-link__city">Maine</span></a></li><li><a href="https://www.broadwayworld.com/baltimore/"><span class="explore-us-link__state">MARYLAND</span><span class="explore-us-link__city">Baltimore</span></a></li><li><a href="https://www.broadwayworld.com/boston/"><span class="explore-us-link__state">MASSACHUSETTS</span><span class="explore-us-link__city">Boston</span></a></li><li><a href="https://www.broadwayworld.com/new-hampshire/"><span class="explore-us-link__state">NEW HAMPSHIRE</span><span class="explore-us-link__city">New Hampshire</span></a></li><li><a href="https://www.broadwayworld.com/new-jersey/"><span class="explore-us-link__state">NEW JERSEY</span><span class="explore-us-link__city">New Jersey</span></a></li><li><a href="https://www.broadwayworld.com/brooklyn/"><span class="explore-us-link__state">NEW YORK</span><span class="explore-us-link__city">Brooklyn</span></a></li><li><a href="https://www.broadwayworld.com/buffalo/"><span class="explore-us-link__state">NEW YORK</span><span class="explore-us-link__city">Buffalo</span></a></li><li><a href="https://www.broadwayworld.com/central-new-york/"><span class="explore-us-link__state">NEW YORK</span><span class="explore-us-link__city">Central New York</span></a></li><li><a href="https://www.broadwayworld.com/long-island/"><span class="explore-us-link__state">NEW YORK</span><span class="explore-us-link__city">Long Island</span></a></li><li><a href="https://www.broadwayworld.com/rockland/"><span class="explore-us-link__state">NEW YORK</span><span class="explore-us-link__city">Rockland / Westchester</span></a></li><li><a href="https://www.broadwayworld.com/charlotte/"><span class="explore-us-link__state">NORTH CAROLINA</span><span class="explore-us-link__city">Charlotte</span></a></li><li><a href="https://www.broadwayworld.com/raleigh/"><span class="explore-us-link__state">NORTH CAROLINA</span><span class="explore-us-link__city">Raleigh</span></a></li><li><a href="https://www.broadwayworld.com/central-pa/"><span class="explore-us-link__state">PENNSYLVANIA</span><span class="explore-us-link__city">Central Pennsylvania</span></a></li><li><a href="https://www.broadwayworld.com/philadelphia/"><span class="explore-us-link__state">PENNSYLVANIA</span><span class="explore-us-link__city">Philadelphia</span></a></li><li><a href="https://www.broadwayworld.com/pittsburgh/"><span class="explore-us-link__state">PENNSYLVANIA</span><span class="explore-us-link__city">Pittsburgh</span></a></li><li><a href="https://www.broadwayworld.com/rhode-island/"><span class="explore-us-link__state">RHODE ISLAND</span><span class="explore-us-link__city">Rhode Island</span></a></li><li><a href="https://www.broadwayworld.com/south-carolina/"><span class="explore-us-link__state">SOUTH CAROLINA</span><span class="explore-us-link__city">South Carolina</span></a></li><li><a href="https://www.broadwayworld.com/vermont/"><span class="explore-us-link__state">VERMONT</span><span class="explore-us-link__city">Vermont</span></a></li><li><a href="https://www.broadwayworld.com/norfolk/"><span class="explore-us-link__state">VIRGINIA</span><span class="explore-us-link__city">Central Virginia</span></a></li><li><a href="https://www.broadwayworld.com/west-virginia/"><span class="explore-us-link__state">VIRGINIA</span><span class="explore-us-link__city">West Virginia</span></a></li></ul></div><div class="explore-us-region-group"><button type="button" class="explore-us-region-btn" data-bww-us-region aria-expanded="false">Central</button><ul class="explore-us-region-list united-dropdown"><li><a href="https://www.broadwayworld.com/birmingham/"><span class="explore-us-link__state">ALABAMA</span><span class="explore-us-link__city">Birmingham</span></a></li><li><a href="https://www.broadwayworld.com/little-rock/"><span class="explore-us-link__city">ARKANSAS</span></a></li><li><a href="https://www.broadwayworld.com/denver/"><span class="explore-us-link__city">COLORADO</span></a></li><li><a href="https://www.broadwayworld.com/chicago/"><span class="explore-us-link__state">ILLINOIS</span><span class="explore-us-link__city">Chicago</span></a></li><li><a href="https://www.broadwayworld.com/indianapolis/"><span class="explore-us-link__state">INDIANA</span><span class="explore-us-link__city">Indianapolis</span></a></li><li><a href="https://www.broadwayworld.com/south-bend/"><span class="explore-us-link__state">INDIANA</span><span class="explore-us-link__city">South Bend</span></a></li><li><a href="https://www.broadwayworld.com/des-moines/"><span class="explore-us-link__state">IOWA</span><span class="explore-us-link__city">Des Moines</span></a></li><li><a href="https://www.broadwayworld.com/wichita/"><span class="explore-us-link__state">KANSAS</span><span class="explore-us-link__city">Wichita</span></a></li><li><a href="https://www.broadwayworld.com/louisville/"><span class="explore-us-link__city">KENTUCKY</span></a></li><li><a href="https://www.broadwayworld.com/new-orleans/"><span class="explore-us-link__state">LOUISIANA</span><span class="explore-us-link__city">New Orleans</span></a></li><li><a href="https://www.broadwayworld.com/michigan/"><span class="explore-us-link__state">MICHIGAN</span><span class="explore-us-link__city">Michigan</span></a></li><li><a href="https://www.broadwayworld.com/minneapolis/"><span class="explore-us-link__state">MINNESOTA</span><span class="explore-us-link__city">Minneapolis / St. Paul</span></a></li><li><a href="https://www.broadwayworld.com/jackson/"><span class="explore-us-link__state">MISSISSIPPI</span><span class="explore-us-link__city">Jackson, MS</span></a></li><li><a href="https://www.broadwayworld.com/kansas-city/"><span class="explore-us-link__state">MISSOURI</span><span class="explore-us-link__city">Kansas City</span></a></li><li><a href="https://www.broadwayworld.com/st-louis/"><span class="explore-us-link__state">MISSOURI</span><span class="explore-us-link__city">St. Louis</span></a></li><li><a href="https://www.broadwayworld.com/montana/"><span class="explore-us-link__state">MONTANA</span><span class="explore-us-link__city">Montana</span></a></li><li><a href="https://www.broadwayworld.com/omaha/"><span class="explore-us-link__state">NEBRASKA</span><span class="explore-us-link__city">Omaha</span></a></li><li><a href="https://www.broadwayworld.com/fargo/"><span class="explore-us-link__state">NORTH DAKOTA</span><span class="explore-us-link__city">Fargo</span></a></li><li><a href="https://www.broadwayworld.com/cincinnati/"><span class="explore-us-link__state">OHIO</span><span class="explore-us-link__city">Cincinnati</span></a></li><li><a href="https://www.broadwayworld.com/cleveland/"><span class="explore-us-link__state">OHIO</span><span class="explore-us-link__city">Cleveland</span></a></li><li><a href="https://www.broadwayworld.com/columbus/"><span class="explore-us-link__state">OHIO</span><span class="explore-us-link__city">Columbus</span></a></li><li><a href="https://www.broadwayworld.com/dayton/"><span class="explore-us-link__state">OHIO</span><span class="explore-us-link__city">Dayton</span></a></li><li><a href="https://www.broadwayworld.com/oklahoma/"><span class="explore-us-link__city">OKLAHOMA</span></a></li><li><a href="https://www.broadwayworld.com/sioux-falls/"><span class="explore-us-link__city">SOUTH DAKOTA</span></a></li><li><a href="https://www.broadwayworld.com/memphis/"><span class="explore-us-link__state">TENNESSEE</span><span class="explore-us-link__city">Memphis</span></a></li><li><a href="https://www.broadwayworld.com/nashville/"><span class="explore-us-link__state">TENNESSEE</span><span class="explore-us-link__city">Nashville</span></a></li><li><a href="https://www.broadwayworld.com/austin/"><span class="explore-us-link__state">TEXAS</span><span class="explore-us-link__city">Austin</span></a></li><li><a href="https://www.broadwayworld.com/dallas/"><span class="explore-us-link__state">TEXAS</span><span class="explore-us-link__city">Dallas</span></a></li><li><a href="https://www.broadwayworld.com/houston/"><span class="explore-us-link__state">TEXAS</span><span class="explore-us-link__city">Houston</span></a></li><li><a href="https://www.broadwayworld.com/san-antonio/"><span class="explore-us-link__state">TEXAS</span><span class="explore-us-link__city">San Antonio</span></a></li><li><a href="https://www.broadwayworld.com/appleton/"><span class="explore-us-link__state">WISCONSIN</span><span class="explore-us-link__city">Appleton</span></a></li><li><a href="https://www.broadwayworld.com/madison/"><span class="explore-us-link__state">WISCONSIN</span><span class="explore-us-link__city">Madison</span></a></li><li><a href="https://www.broadwayworld.com/milwaukee/"><span class="explore-us-link__state">WISCONSIN</span><span class="explore-us-link__city">Milwaukee</span></a></li></ul></div><div class="explore-us-region-group"><button type="button" class="explore-us-region-btn" data-bww-us-region aria-expanded="false">Western</button><ul class="explore-us-region-list united-dropdown"><li><a href="https://www.broadwayworld.com/anchorage/"><span class="explore-us-link__state">ALASKA</span><span class="explore-us-link__city">Anchorage</span></a></li><li><a href="https://www.broadwayworld.com/phoenix/"><span class="explore-us-link__state">ARIZONA</span><span class="explore-us-link__city">Phoenix Metro</span></a></li><li><a href="https://www.broadwayworld.com/costa-mesa/"><span class="explore-us-link__state">CALIFORNIA</span><span class="explore-us-link__city">Costa Mesa</span></a></li><li><a href="https://www.broadwayworld.com/los-angeles/"><span class="explore-us-link__state">CALIFORNIA</span><span class="explore-us-link__city">Los Angeles</span></a></li><li><a href="https://www.broadwayworld.com/palm-springs/"><span class="explore-us-link__state">CALIFORNIA</span><span class="explore-us-link__city">Palm Springs</span></a></li><li><a href="https://www.broadwayworld.com/sacramento/"><span class="explore-us-link__state">CALIFORNIA</span><span class="explore-us-link__city">Sacramento</span></a></li><li><a href="https://www.broadwayworld.com/san-diego/"><span class="explore-us-link__state">CALIFORNIA</span><span class="explore-us-link__city">San Diego</span></a></li><li><a href="https://www.broadwayworld.com/san-francisco/"><span class="explore-us-link__state">CALIFORNIA</span><span class="explore-us-link__city">San Francisco</span></a></li><li><a href="https://www.broadwayworld.com/santa-barbara/"><span class="explore-us-link__state">CALIFORNIA</span><span class="explore-us-link__city">Santa Barbara</span></a></li><li><a href="https://www.broadwayworld.com/thousand-oaks/"><span class="explore-us-link__state">CALIFORNIA</span><span class="explore-us-link__city">Thousand Oaks</span></a></li><li><a href="https://www.broadwayworld.com/hawaii/"><span class="explore-us-link__city">HAWAII</span></a></li><li><a href="https://www.broadwayworld.com/boise/"><span class="explore-us-link__state">IDAHO</span><span class="explore-us-link__city">Boise</span></a></li><li><a href="https://www.broadwayworld.com/las-vegas/"><span class="explore-us-link__state">NEVADA</span><span class="explore-us-link__city">Las Vegas</span></a></li><li><a href="https://www.broadwayworld.com/albuquerque/"><span class="explore-us-link__state">NEW MEXICO</span><span class="explore-us-link__city">Albuquerque</span></a></li><li><a href="https://www.broadwayworld.com/portland/"><span class="explore-us-link__city">OREGON</span></a></li><li><a href="https://www.broadwayworld.com/salt-lake-city/"><span class="explore-us-link__city">UTAH</span></a></li><li><a href="https://www.broadwayworld.com/seattle/"><span class="explore-us-link__state">WASHINGTON</span><span class="explore-us-link__city">Seattle</span></a></li></ul></div></div><div class="explore-us-stories"><div class="explore-us-stories-grid"><div class="explore-card-slot" data-slot="us-around"></div></div></div></div></div></div></li><li class="explore-category-item"><button type="button" class="explore-category-btn" data-bww-explore-cat aria-expanded="false">West End / UK</button><i class="carousel-control-next-icon next-icon" aria-hidden="true"></i><div class="explore-mega-menu bww-explore-panel"><button type="button" class="close-mega-menu" aria-label="Close menu"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></button><div class="container-fluid"><div class="row"><div class="megamenu-title"><p class="megamenu-title" style="color:white;">West End / UK</p></div><div class="explore-us-stories-grid"><div class="explore-card-slot" data-slot="we-stories"></div></div></div></div></div></li><li class="explore-category-item"><button type="button" class="explore-category-btn" data-bww-explore-cat aria-expanded="false">International</button><i class="carousel-control-next-icon next-icon" aria-hidden="true"></i><div class="explore-mega-menu bww-explore-panel"><button type="button" class="close-mega-menu" aria-label="Close menu"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></button><div class="container-fluid"><div class="row"><div class="megamenu-title"><p class="megamenu-title" style="color:white;">International</p></div><div class="explore-us-stories-grid"><div class="single explore-story"><p class="h5"><a href="https://www.broadwayworld.com/canada/">Canada</a></p><div class="explore-card-slot" data-slot="intl-canada"></div></div><div class="single explore-story"><p class="h5"><a href="https://www.broadwayworld.com/australia-nz/">Australia / New Zealand</a></p><div class="explore-card-slot" data-slot="intl-australia"></div></div><div class="single explore-story"><p class="h5"><a href="https://www.broadwayworld.com/europe/">Europe</a></p><div class="explore-card-slot" data-slot="intl-europe"></div></div><div class="single explore-story"><p class="h5"><a href="https://www.broadwayworld.com/asia/">Asia</a></p><div class="explore-card-slot" data-slot="intl-asia"></div></div><div class="single explore-story"><p class="h5"><a href="https://www.broadwayworld.com/latin-america/">Latin America</a></p><div class="explore-card-slot" data-slot="intl-latin"></div></div><div class="single explore-story"><p class="h5"><a href="https://www.broadwayworld.com/africa-middle-east/">Africa / Middle East</a></p><div class="explore-card-slot" data-slot="intl-africa"></div></div></div></div></div></div></li><li class="explore-category-item"><button type="button" class="explore-category-btn" data-bww-explore-cat aria-expanded="false">Entertainment</button><i class="carousel-control-next-icon next-icon" aria-hidden="true"></i><div class="explore-mega-menu bww-explore-panel"><button type="button" class="close-mega-menu" aria-label="Close menu"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></button><div class="container-fluid"><div class="row"><div class="megamenu-title"><p class="megamenu-title" style="color:white;">Entertainment</p></div><div class="explore-us-stories-grid"><div class="explore-card-slot" data-slot="ent-stories"></div></div></div></div></div></li><li class="bww-explore-personal"><div class="bww-for-you-wrap"><a href="https://www.broadwayworld.com/for-you/recommended/" class="btn register-btn btn-register-light-accent bww-for-you-btn"><span class="bww-for-you__brand">BWW</span><span class="bww-for-you__label">For You</span></a></div><div id="rec-regions-slot"></div></li></ul></nav></div></div><!--- EXPLORE Category End --->                <div class="col-xl-8 col-md-8 px-1 header-flex">
+                  <!-- sticky -->
+                  <div class="sticky-logo bww-regional-brand">
+                    <a href="/" class="bww-regional-brand__logo">
+                     <img class="img" src="https://cloudimages2.broadwayworld.com/2017/broadwayworld-new-nonretina-22.png" alt="BroadwayWorld" width="133" height="80">
+   
+ 
+                    </a>
+            <a href="https://www.broadwayworld.com/classifieds-jobs/" class="bww-regional-brand__name"></a>
+                  </div>
+                  <!-- Main-menu -->
+                  <div class="main-menu d-md-block" id="mobile-nav">
+
+
+                    
+                    
+                    
+                    
+                    <nav aria-label="Main navigation">
+                      <ul id="navigation">
+                        
+                        
+                                    
+                          
+                          
+                                                      
+                                                   
+            
+            
+            
+                          
+            
+                        <li>
+                          <a href="#" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" style="color:white!important;">News</a>
+                          <ul class="submenu dropdown-menu">
+                            <li>
+                              <a href="https://www.broadwayworld.com/newsroom/">Latest News</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/interviews/">Interviews</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/cdsbooksdvds.php">New Releases</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/gallerynew.php">Photos</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/reviews/">Reviews</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/tonyawards.php">Tony Awards Guide</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/tvmainnew.php">Videos</a>
+                            </li>
+                          </ul>
+                        </li>
+                        
+                        
+                        <li>
+                          <a href="#" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" class="shows-link" style="color:white!important;">Shows</a>
+                          <ul class="submenu dropdown-menu" id="shows-submenu">
+                             <li class="bww-nav-dropdown-action bww-nav-dropdown-action--promo">
+                              <a href="https://www.broadwayworld.com/myshows/join.php">
+                                <span class="bww-nav-dropdown-action__promo">
+                                  <span class="bww-nav-dropdown-action__promo-head">
+                                    <span class="bww-nav-dropdown-action__promo-title">My Shows</span>
+                                    <span class="bww-nav-badge">NEW</span>
+                                  </span>
+                                  <span class="bww-nav-dropdown-action__promo-tagline">Track your shows &amp; get recommendations</span>
+                                </span>
+                              </a>
+                              </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/shows/broadway-shows.php" style="border-bottom: 0px solid;">Broadway Shows</a>
+                         <table style="margin-top:-5px;width:100%;border-collapse:collapse;"><tr><td style="vertical-align:top;padding:0;">   
+ <a href="https://data.broadwayworld.com/rec/ticketcentralclick2023.php?tcid=232" target="_new"><img style="display:block;max-width:100%;width:100%;height:auto;aspect-ratio:1200/800;object-fit:cover;" width="1200" height="800" alt="Ticket Central" loading="lazy" src="https://cloudimages2.broadwayworld.com/ticketcentral/1785787781_1200x800_TicketCentral.jpg?format=auto&width=600"></a>  
+ 
+
+</td></tr><tr><td style="vertical-align:top;padding:0;">
+
+
+   
+</td></tr></table>                       
+                      
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/shows/shows.php?page=oshows">Off-Broadway</a>
+                                </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/off-off-broadway/">Off-Off-Broadway</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/shows/shows.php?page=immersive">Immersive / Experiential</a>
+                            </li>
+
+                            <li>
+                              <a href="https://www.broadwayworld.com/pickashowregional.php">Search by Zip Code</a>
+                            </li>
+                            
+                            <li>
+                              <a href="/shows/broadway-shows-discounts.php">Special Offers</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/shows/shows.php?page=tour">Tours</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/shows/shows.php?page=westend">West End</a>
+                              
+                              
+                            </li>
+                            
+                            <li class="bww-nav-sponsored"><a class="bww-aff-link" href="/ticket-go.php?dest=https%3A%2F%2Fwww.ticketmaster.com%2Fbroadway&amp;show=0&amp;fromlink=0&amp;regid=&amp;campaign=discover&amp;logo=on" data-bww-dest="https://www.ticketmaster.com/broadway" data-bww-campaign="discover" data-bww-track="fromlink=0&amp;clickedshow=0&amp;regid=&amp;logo=on" target="_new" rel="nofollow">Powered By <img src="https://cloudimages2.broadwayworld.com/Ticketmaster_Horizontal_Lightmode.png" width="135" height="20" loading="lazy" style="width:125px;height:auto;" alt="Ticketmaster">
+
+							</a></li>
+                          </ul>
+                          
+                          
+                        </li>
+                        <li>
+                          <a href="#" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" style="color:white!important;">Industry</a>
+                          <ul class="submenu dropdown-menu">
+                            <li>
+                              <a href="https://www.broadwayworld.com/industry/">Industry Home</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/bwidb/">BWW Database</a>
+                            </li>
+                            <li class="bww-nav-submenu-pro">
+                              <a href="https://www.broadwayworld.com/grosses.php" class="bww-nav-submenu-pro__link">Grosses</a>
+                              <span class="bww-nav-badge bww-nav-badge--green">Updated: 08/02</span>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/topic/Industry-Pro">Industry Newsletter</a>
+                            </li>
+                            
+                               <li>
+                              <a href="https://www.broadwayworld.com/people-database/">People Pages</a>
+                            </li>
+                            
+                                 <li>
+                              <a href="https://www.broadwayworld.com/industry-social.php">Social Media Analytics</a>
+                            </li>
+                            <li class="bww-nav-submenu-pro">
+                              <a href="https://www.broadwayworld.com/insights/" class="bww-nav-submenu-pro__link">Pro Insights</a>
+                              <a href="https://www.broadwayworld.com/plus/signup.php?pro&amp;utm_source=nav" class="bww-nav-badge">PRO</a>
+                            </li>
+                                  <li>
+                              <a href="https://www.broadwayworld.com/industry-bww-theatres.php">Theater Report</a>
+                            </li>
+                            
+                         <li>   <a href="https://www.broadwayworld.com/work-with-us/">Work With Us</a>
+                            </li>
+                            
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="https://forum.broadwayworld.com/" style="color:white!important;">Chat</a>
+                        </li>
+                        <li>
+                          <a href="#" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" style="color:white!important;">Jobs</a>
+                          <ul class="submenu dropdown-menu">
+                            <li>
+                              <a href="https://www.broadwayworld.com/theatre-auditions/">Equity</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/non-equity/">Non-Equity</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/classifieds-jobs/">Find a Job</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/classifieds-jobs/addclassifieds.php">Post a Job</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="#" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" style="color:white!important;">Students</a>
+                          <ul class="submenu dropdown-menu">
+                            <li>
+                              <a href="https://www.broadwayworld.com/student-center/">Student Center Home</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/bwwjr.php">BWW Junior</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/studentcalendar-elementary.php">Elementary School</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/studentcalendarhighschool.php">High School</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/studentcenter.php">College Center</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/scholarships.php">Scholarships</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/studentcenter-college-guide.php">College Program Guide</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/campguide/">Camp Guide</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/youth-theater/">Youth Theaters</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/dancestudios/">Dance Studios</a>
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/nextonstage/">Next on Stage</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="https://www.broadwayworld.com/shop/" style="color:white!important;">Shop</a>
+                        </li>
+                        <li>
+                          <a href="#" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" style="color:white!important;">Games</a>
+                          <ul class="submenu dropdown-menu">
+
+                          <li>
+                              <a href="https://www.broadwayworld.com/games/?utm_source=nav">Games Center</a>
+                            </li>
+
+                            
+                            <li class="bww-nav-dropdown-action bww-nav-dropdown-action--promo bww-nav-dropdown-action--sixdeg">
+                              <a href="https://www.broadwayworld.com/six-degrees/?utm_source=nav">
+                                <span class="bww-nav-dropdown-action__promo">
+                                  <span class="bww-nav-dropdown-action__promo-head">
+                                    <span class="bww-nav-dropdown-action__promo-title">6 Degrees of Broadway</span>
+                                    <span class="bww-nav-badge">NEW</span>
+                                  </span>
+                                  <span class="bww-nav-dropdown-action__promo-tagline">Guess the degrees. Build the credit chain.</span>
+                                </span>
+                              </a>
+                            </li>
+
+                            <li class="bww-nav-dropdown-action bww-nav-dropdown-action--promo">
+                              <a href="https://www.broadwayworld.com/fantasygame/?utm_source=nav">
+                                <span class="bww-nav-dropdown-action__promo">
+                                  <span class="bww-nav-dropdown-action__promo-head">
+                                    <span class="bww-nav-dropdown-action__promo-title">Producer Fantasy Game</span>
+                                  </span>
+                                  <span class="bww-nav-dropdown-action__promo-tagline">Draft 6 shows. Score from real grosses.</span>
+                                </span>
+                              </a>
+                            </li>
+
+                              <li>
+                              <a href="https://www.broadwayworld.com/trivia-game/?utm_source=nav">Trivia Game</a>
+                            </li>
+                       
+                          <li>
+                              <a href="https://www.broadwayworld.com/word-search/?utm_source=nav">Word Search</a>
+                            </li>
+                          
+                                 <li>
+                              <a href="https://www.broadwayworld.com/scramble/?utm_source=nav">Broadway Scramble</a>
+                            </li>
+                            
+                                 <li>
+                              <a href="https://www.broadwayworld.com/matchup/?utm_source=nav">Match-Up Game</a> 
+                            </li>
+                            <li>
+                              <a href="https://www.broadwayworld.com/tonygame.php?utm_source=nav">Tonys Trivia</a>
+                            </li>
+                            
+                              <li>
+                              <a href="https://www.broadwayworld.com/game/?utm_source=nav">Word Game</a>
+                            </li>
+                           
+                          </ul>
+                        </li>
+
+                                                    
+                     <li class="hide-on-ipad">
+      <a href="https://stagemag.broadwayworld.com/" style="color:white!important;">Stage Mag</a>
+  </li>
+  
+
+                      </ul>
+                      
+                      
+                    </nav>
+                    
+                  </div>
+
+
+                </div>
+
+
+                <div class="col-xl-2 col-md-2 px-0 login-menu">
+                  
+                  
+                  <ol>
+                    
+                                      <li style="background-color:#000000;">
+                      <a href="https://www.broadwayworld.com/register.php?tracker=nav&amp;newtracker=99" >Register</a>
+                    </li>
+                    <li style="background-color:#000000;">
+                      <a style="color:white!important;" href="https://www.broadwayworld.com/newlogin.php">Login</a>
+                    </li>
+              
+
+                      </ol>
+                                                              
+
+                
+                  
+                  
+                  
+                  
+                  <div class="header-right-btn f-right" role="button" tabindex="0" aria-label="Open search" onclick="if(window.bwwSearchPalette){window.bwwSearchPalette.open(event);}return false;" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();if(window.bwwSearchPalette){window.bwwSearchPalette.open(event);}}">
+                    <img src="https://cloudimages2.broadwayworld.com/bworld1523/assets/img/svg/Search-icon.svg" alt="Search" height="18" width="18">
+                  </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div class="col-12">
+                  <div class="mobile_menu d-block d-md-none">
+                    <button type="button" class="navbar-brand" aria-label="Open mobile menu" onclick="bwwToggleMobileNav(event)" style="background:transparent;border:0;padding:0;"></button>
+                  </div>
+                </div>
+              </div>
+              
+              <script data-cfasync="false" defer src="/bworld1523/assets/js/explore-nav.js?v=3.1786282243"></script>
+              <script data-cfasync="false" defer src="/bworld1523/assets/js/nav-jr-submenu.js?v=3.1786282243"></script>
+             
+
+            <!-- Command-palette search -->
+      <div id="bww-search-overlay" class="bww-search-overlay" aria-hidden="true" hidden style="display:none">
+        <div class="bww-search-palette" role="dialog" aria-modal="true" aria-label="Search BroadwayWorld">
+          <form action="https://www.broadwayworld.com/search/" id="header-cse-search-box" name="Search">
+            <div class="bww-search-palette-header">
+              <input type="text" aria-required="true" aria-label="Search Field" aria-autocomplete="list" aria-controls="searchResult" name="q" autocomplete="off" id="search-textm" placeholder="Search BroadwayWorld…" itemprop="query-input" required="">
+              <button type="submit">Search</button>
+              <button type="button" class="bww-search-palette-close" id="bww-search-close" aria-label="Close search">&times;</button>
+            </div>
+            <input type="hidden" name="cx" value="003281041504712504013:ma8kxnaa1hu">
+            <input type="hidden" name="cof" value="FORID:11">
+            <input type="hidden" name="ie" value="UTF-8">
+            <input type="hidden" name="search_type[]" value="site">
+            <p class="bww-search-palette-hint bww-search-palette-hint-desktop"><kbd>Ctrl</kbd>+<kbd>K</kbd> to open · <kbd>Esc</kbd> to close</p>
+            <div id="searchResult" role="listbox" aria-label="Search suggestions"></div>
+          </form>
+        </div>
+      </div>
+      <script data-cfasync="false">!function(){var o=document.getElementById('bww-search-overlay');if(o&&o.parentNode!==document.body){document.body.appendChild(o);}}();</script>
+      <script data-cfasync="false" defer src="/bworld1523/assets/js/search-autocomplete.js?v=20260729"></script>
+      <!-- Searchbar End -->
+      </div>
+      </div>
+      </div>
+      </div>
+      <!-- Header End -->
+    </header>
+    <script data-cfasync="false" defer src="/bworld1523/assets/js/header-sticky.js?v=2.1786282243"></script>
+    
+
+<div class="mbtop">
+  
+
+<!-- Mobile Only Navigation -->
+<script>
+function trackMobileNavClick(link, label) {
+    // Track the click
+    fetch('/mobile-nav-track.php?link=' + encodeURIComponent(link) + '&label=' + encodeURIComponent(label), {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).catch(function(error) {
+        console.log('Tracking error:', error);
+    });
+    
+    // Change color as before
+    event.target.style.color = '#000';
+}
+</script>
+<div class="mobile-nav d-block d-md-none" style="width: 100%; border-bottom: 1px solid #000; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch;">
+  <a href="https://www.broadwayworld.com/" class="mobile-nav-item" onclick="trackMobileNavClick('https://www.broadwayworld.com/', 'Home')">
+    Home
+  </a>
+
+    
+  <a href="https://www.broadwayworld.com/for-you/recommended/" class="mobile-nav-item" onclick="trackMobileNavClick('https://www.broadwayworld.com/for-you/recommended/', 'For You')">
+    For You
+  </a>
+
+  
+  <a href="https://forum.broadwayworld.com" class="mobile-nav-item" onclick="trackMobileNavClick('https://forum.broadwayworld.com', 'Chat')">
+    Chat  </a>
+
+
+  <a href="https://www.broadwayworld.com/myshows/join.php" class="mobile-nav-item" onclick="trackMobileNavClick('https://www.broadwayworld.com/myshows/', 'My Shows')">
+    My Shows 
+  </a>
+    <a href="https://www.broadwayworld.com/register.php" class="mobile-nav-item" onclick="trackMobileNavClick('https://www.broadwayworld.com/register.php', 'Register')">
+    Register/Login
+  </a>
+    
+  
+  <a href="https://www.broadwayworld.com/games/" class="mobile-nav-item" onclick="trackMobileNavClick('https://www.broadwayworld.com/games/', 'Games')">
+    Games  </a>
+    <a href="https://www.broadwayworld.com/grosses.php" class="mobile-nav-item" onclick="trackMobileNavClick('https://www.broadwayworld.com/grosses.php', 'Grosses')">
+    Grosses
+  </a>
+
+  </div>
+
+<div id="ezoic-pub-ad-placeholder-935"></div></div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.broadwayworld.com/"},{"@type":"ListItem","position":2,"name":"Classifieds & Jobs","item":"https://www.broadwayworld.com/classifieds-jobs/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Broadway Jobs + Theatre Classifieds","url":"https://www.broadwayworld.com/classifieds-jobs/","numberOfItems":36,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"JobPosting","title":"Production Manager","description":"POSITION: PRODUCTION MANAGER STATUS: FULL-TIME (EXEMPT) START DATE: ASAP TERM: We would appreciate an initial commitment through the 2026/2027 Season (through July 31, 2027). Throughout the initial employment period, we will meet to evaluate performance and needs. PRODUCTION MANAGER RESPONSIBILITIES (including, but not limited to): This position is a managerial position responsible for the oversight, upkeep, and well-being of all production/technical aspects of the organization. - Manage, sea...","url":"https://www.broadwayworld.com/job/production-manager-10539","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"A.C.T. of Connecticut"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"RIDGEFIELD","addressCountry":"US"}},"datePosted":"2026-07-24","validThrough":"2026-08-23T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":62000,"unitText":"YEAR"}}}},{"@type":"ListItem","position":2,"item":{"@type":"JobPosting","title":"Costume Director ","description":"POSITION SUMMARY The Costume Director is responsible for overseeing the Costume and Wardrobe Departments to produce world-class opera productions, both grand and intimate. This role ensures smooth daily operations of the shop and wardrobe facilities during the producing season. The Costume Director coordinates with the Designer to manage all costume items, including their purchase, construction, alteration, and maintenance for TAO productions. They support the artistic vision of the productio...","url":"https://www.broadwayworld.com/job/costume-director-10544","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"The Atlanta Opera"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Atlanta","addressCountry":"US"}},"datePosted":"2026-07-27","validThrough":"2026-08-26T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","minValue":80000,"maxValue":90000,"unitText":"YEAR"}}}},{"@type":"ListItem","position":3,"item":{"@type":"JobPosting","title":"Faculty, Dance (Ballet)","description":"Miami Dade College (MDC) is seeking a dynamic and dedicated Faculty member to join the Dance Program.What you will be doing:Teach dance courses for both NWSA high school and college programs to include all levels of modern and other related areas such as composition, history and repertory.Choreograph and/or stage and serve as rehearsal director for dance works for the department.Evaluate and advise students.Participate in departmental, campus and college affairs.Participate in curriculum deve...","url":"https://www.broadwayworld.com/job/faculty-dance-ballet-10564","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Miami Dade College"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Miami","addressCountry":"US"}},"datePosted":"2026-07-31","validThrough":"2026-08-30T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":53274,"unitText":"YEAR"}}}},{"@type":"ListItem","position":4,"item":{"@type":"JobPosting","title":"Now Casting: The Cat in the Hat National Tour","description":"THE CAT IN THE HAT – NATIONAL TOURProducer: Showcase Entertainment GroupDirector: Nick WilkinsonCasting Director: Herbert WelchBased on the book by Dr. SeussAdapted for the stage by Katie MitchellCallbacksWednesday, September 23, 2026Ripley-Grier Studios520 8th AvenueNew York, NY 10018Studio TBARehearsalsJanuary 12–22, 2027Tour DatesJanuary 23–April 5, 2027Contract InformationSalary: $800–$1,000 per week, plus per diem.This tour will travel using a combination of sleeper bus and hotel accommo...","url":"https://www.broadwayworld.com/job/now-casting-the-cat-in-the-hat-national-tour-10594","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Showcase Entertainment Group"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Manhatten ","addressCountry":"US"}},"datePosted":"2026-08-08","validThrough":"2026-09-07T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":800,"unitText":"WEEK"}}}},{"@type":"ListItem","position":5,"item":{"@type":"JobPosting","title":"Actor","description":"Emmanuel Episcopal Church Presents Auditions for Doubt: A Parable Audition Dates: Wednesday, August 19 (6:30-8:30 pm), Thursday, August 20 (6:30-8:30 pm), or Saturday, August 22 (10:00 am - Noon) Invited Callbacks: Wednesday, August 26 (6:30-8:30 pm) and/or Thursday, August 27 (6:30-8:30 pm) Location: Emmanuel Episcopal Church Address: 811 Cathedral St, Baltimore MD (use the main doors to the church) Compensation: Actors who are cast in a role will receive a $400 stipend for their participati...","url":"https://www.broadwayworld.com/job/actor-10580","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Theater at Emmanuel Episcopal"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Baltimore","addressCountry":"US"}},"datePosted":"2026-08-05","validThrough":"2026-09-04T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":400,"unitText":"WEEK"}}}},{"@type":"ListItem","position":6,"item":{"@type":"JobPosting","title":"Stage Manager","description":"Job Description Job Title: Stage Manager Reporting Relationship: Reports to Production Stage Manager Supervises: Assistant Stage Managers, Run Crew, Actors Job Classification: Full-time Exempt with full benefits package (health, vision, dental, life insurance, generous PTO, 403(b) retirement options) Typical Work Schedule: Varies Rate: $45,000 - $50,000/year General Functions: In collaboration with the Production Stage Manager, the Stage Manager oversees, coordinates, and participates in the ...","url":"https://www.broadwayworld.com/job/stage-manager-10582","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Arizona Broadway Theatre"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"PEORIA","addressCountry":"US"}},"datePosted":"2026-08-06","validThrough":"2026-09-05T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":45000,"unitText":"YEAR"}}}},{"@type":"ListItem","position":7,"item":{"@type":"JobPosting","title":"Songwriter wanted ","description":"Role Overview Position: Lead Songwriter / Composer Project: Chameleon (Original Musical) Trajectory: Orange County production leading to potential Off-Broadway Development Reports To: Lead Producer (Benny Lumpkins Jr.) and Creative Team Project Summary Chameleon is an original musical currently moving rapidly toward an Off-Broadway production. Following a successful reading, we are solidifying our core creative team to prepare the show for its next phase. We are seeking a versatile, collabora...","url":"https://www.broadwayworld.com/job/songwriter-wanted-10574","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Chameleon: A New Musical "},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Whittier","addressCountry":"US"}},"datePosted":"2026-08-04","validThrough":"2026-09-03T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":700,"unitText":"WEEK"}}}},{"@type":"ListItem","position":8,"item":{"@type":"JobPosting","title":"Director of Development","description":"Director of Development About the Opportunity Ballet Hispánico, the nation’s leading American Latino dance company, seeks a new Director of Development. This is an exciting opportunity for a fundraising leader who has an abundant passion for dance and the performing arts, a deep appreciation of Latine culture, and an inherent understanding of philanthropy to inspire a wide range of individuals in their commitment to the organization. While the Director of Development will be a capable team le...","url":"https://www.broadwayworld.com/job/director-of-development-10547","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Ballet Hispánico via TOC Arts Partners"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"New York","addressCountry":"US"}},"datePosted":"2026-07-27","validThrough":"2026-08-26T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","minValue":150000,"maxValue":170000,"unitText":"YEAR"}}}},{"@type":"ListItem","position":9,"item":{"@type":"JobPosting","title":"IT Manager","description":"About The Shed The Shed is a cultural institution of and for the 21st century. We produce and welcome innovative art and ideas, across all forms of creativity, to build a shared understanding of our rapidly changing world and a more equitable society. In our highly adaptable building on Manhattan’s west side, The Shed brings together established and emerging artists to create new work in fields ranging from pop to classical music, painting to digital media, theater to literature, and sculptur...","url":"https://www.broadwayworld.com/job/it-manager-10571","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"The Shed"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"New York","addressCountry":"US"}},"datePosted":"2026-08-03","validThrough":"2026-09-02T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":115000,"unitText":"YEAR"}}}},{"@type":"ListItem","position":10,"item":{"@type":"JobPosting","title":"Project Manager","description":"# Full-Time Project Manager **Location:** Jersey City, NJ **Employment Type:** Full-Time **Salary:** $60,000–$80,000 annually, based on experience **Tom Carroll Scenery** is seeking an experienced **Project Manager** to join our team. For over 30 years, Tom Carroll Scenery has fabricated award-winning scenery, props, and custom environments for Broadway, Off-Broadway, regional theater, museums, retail installations, trade shows, television, and live events. We are looking for an organized, co...","url":"https://www.broadwayworld.com/job/project-manager-10481","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Tom Carroll Scenery"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Jersey City","addressCountry":"US"}},"datePosted":"2026-07-14","validThrough":"2026-08-13T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":60000,"unitText":"YEAR"}}}},{"@type":"ListItem","position":11,"item":{"@type":"JobPosting","title":"OFF B-WAY A SOULFUL CHRISTMAS RETURNS FOR YEAR 10! SINGERS & DANCERS","description":"Kendrell Bowman Productions LLC is seeking dynamic, soulful performers for the 10th Anniversary production of A Soulful Christmas: A Groovy Musical Revue, returning Off-Broadway this holiday season. This electrifying holiday musical celebrates the joy of Christmas through the timeless sounds of Soul, Gospel, Motown, and R&B, featuring powerhouse vocals, high-energy choreography, and audience interaction. SEEKING Men & Women (Ages 18–35) Strong Gospel-style vocalists with soulful, expressive v...","url":"https://www.broadwayworld.com/job/off-b-way-a-soulful-christmas-returns-for-year-10-singers-dancers-10570","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"KENDRELL BOWMAN PRODUCTIONS LLC "},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"NEW YORK ","addressCountry":"US"}},"datePosted":"2026-08-07","validThrough":"2026-09-06T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","minValue":750,"maxValue":800,"unitText":"WEEK"}}}},{"@type":"ListItem","position":12,"item":{"@type":"JobPosting","title":"Managing Director","description":"Managing Director Position Profile About the Opportunity The Managing Director is Texas Performing Arts “number two” leader. The position is responsible for implementing the Executive & Artistic Director’s strategic vision by leading daily operations, providing financial management, and guiding the work of TPA’s operational and administrative teams. The position works closely with colleagues across UT Austin and engages extensively with the university’s centralized systems and policies. Repor...","url":"https://www.broadwayworld.com/job/managing-director-10476","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Texas Performing Arts"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Austin","addressCountry":"US"}},"datePosted":"2026-07-13","validThrough":"2026-08-12T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":150000,"unitText":"YEAR"}}}},{"@type":"ListItem","position":13,"item":{"@type":"JobPosting","title":"Senior Director, Production","description":"Senior Director, Production About the Opportunity Lincoln Center for the Performing Arts, the world’s leading performing arts center managing more than 16 acres of performance and gathering space in New York City, seeks to hire its next Senior Director, Production. This individual will have the opportunity to execute all live-event production elements occurring within Lincoln Center’s state-of-the-art concert halls – including the newly renovated David Geffen Hall – and throughout its many pu...","url":"https://www.broadwayworld.com/job/senior-director-production-10565","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Lincoln Center for the Performing Arts via TOC Arts Partners"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"New York","addressCountry":"US"}},"datePosted":"2026-07-31","validThrough":"2026-08-30T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","minValue":215000,"maxValue":250000,"unitText":"YEAR"}}}},{"@type":"ListItem","position":14,"item":{"@type":"JobPosting","title":"Executive Director","description":"Executive Director About the Opportunity The Gallo Center for the Arts (GCA) seeks a dynamic, mission-driven executive to serve as its next Executive Director. This is an exceptional opportunity for an accomplished arts leader to guide a thriving, community-rooted performing arts center into its next era — building on a strong artistic and civic legacy while strengthening the organization's financial foundation, programming, and community partnerships. About the Gallo Center for the Arts The ...","url":"https://www.broadwayworld.com/job/executive-director-10589","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Gallo Center For The Arts"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Modesto","addressCountry":"US"}},"datePosted":"2026-08-07","validThrough":"2026-09-06T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","minValue":190000,"maxValue":220000,"unitText":"YEAR"}}}},{"@type":"ListItem","position":15,"item":{"@type":"JobPosting","title":"Director","description":"Troupers Light Opera is seeking a director for its April, 2027 production of \"The Mikado,\" by Gilbert and Sullivan. We will hold auditions in November and begin rehearsals on Monday and Wednesday evenings and Saturday mornings around the end of January. All auditions, rehearsals and the 4 performances will be at Crystal Theater in Norwalk, CT, (66 Bayview Ave). The director need not attend music rehearsals but must be at all the staging rehearsals. Performances will be April 3, 4, 10 and 11. ...","url":"https://www.broadwayworld.com/job/director-10586","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Troupers Light Opera"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Norwalk","addressCountry":"US"}},"datePosted":"2026-08-06","validThrough":"2026-09-05T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":2500,"unitText":"WEEK"}}}},{"@type":"ListItem","position":16,"item":{"@type":"JobPosting","title":"Artistic Director-Studio Theatre working with Management Consultants for the Arts","description":"Studio Theatre is seeking its next Artistic Director, someone to cultivate and champion the artistic vision of Studio, planning seasons of stellar, thought-provoking contemporary theater written by significant playwrights and presented by a mix of local, national, and international artists. Studio Theatre has engaged Management Consultants for the Arts to lead the search, and interested candidates may apply for this position by visiting this link: https://www.mcaonline.com/searches/artistic-d...","url":"https://www.broadwayworld.com/job/artistic-director-studio-theatre-working-with-management-consultants-for-the-arts-10505","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Studio Theatre"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Washington","addressCountry":"US"}},"datePosted":"2026-07-21","validThrough":"2026-08-20T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":195000,"unitText":"YEAR"}}}},{"@type":"ListItem","position":17,"item":{"@type":"JobPosting","title":"Technical Designer","description":"# Full-Time Technical Designer **Location:** Jersey City, NJ **Employment Type:** Full-Time **Salary:** $50,000–$65,000 annually, based on experience Tom Carroll Scenery is a custom fabrication shop specializing in theater and commercial work. We build unique, detail-driven scenery, props, and displays for Broadway, theater, museums, retail installations, trade shows, television, and live events. Our shop environment is fast-paced, collaborative, and deadline-oriented, with multiple projects ...","url":"https://www.broadwayworld.com/job/technical-designer-10483","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Tom Carroll Scenery"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Jersey City","addressCountry":"US"}},"datePosted":"2026-07-15","validThrough":"2026-08-14T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":50000,"unitText":"YEAR"}}}},{"@type":"ListItem","position":18,"item":{"@type":"JobPosting","title":"Full-Time Master Carpenter","description":"Full-Time Master Carpenter Company: Tom Carroll Scenery Location: Jersey City, NJ Start Date: September 1, 2026 Employment Type: Full-Time Pay: $30–$38 per hour, based on experience Tom Carroll Scenery is a custom fabrication shop specializing in theater and commercial work. We build unique, detail-driven scenery, props, and displays across a wide range of materials and specifications. Our shop environment is fast-paced, collaborative, and deadline-oriented, with multiple projects moving simu...","url":"https://www.broadwayworld.com/job/full-time-master-carpenter-10484","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Tom Carroll Scenery"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Jersey City","addressCountry":"US"}},"datePosted":"2026-07-16","validThrough":"2026-08-15T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":30,"unitText":"HOUR"}}}},{"@type":"ListItem","position":19,"item":{"@type":"JobPosting","title":"  Theater Manager LCT3/Claire Tow Theater at Lincoln Center Theater ","description":"Overview: LCT’s mission is to bring exceptional theater to life. Building on a legacy of artistic excellence, LCT strives to expand what is possible: to make the magic of theatre more palpable, empowering visionary artists and extending the invitation for the community to join in celebrating the power of live performance. This upcoming season embodies this mission-driven work and is the second under the leadership of Kewsong Lee Artistic Director Lear deBessonet, Managing Director Mike Schlei...","url":"https://www.broadwayworld.com/job/theater-manager-lct3-claire-tow-theater-at-lincoln-center-theater-10557","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Lincoln Center Theater"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"New York","addressCountry":"US"}},"datePosted":"2026-07-29","validThrough":"2026-08-28T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":68848,"unitText":"YEAR"}}}},{"@type":"ListItem","position":20,"item":{"@type":"JobPosting","title":"Assistant Producer","description":"The Assistant Producer is a collaborator in the Artistic Department, providing overall department support, primarily in the preparation and execution of Alley Theatre productions. This individual will work directly with Artistic Director Rob Melrose and Associate Artistic Directors Amber Gray, Michael Locher, and Bradley Michalakis to support the artistic vision and product of the Tony Award winning Alley Theatre. The Assistant Producer reports to the Associate Artistic Director of Producing....","url":"https://www.broadwayworld.com/job/assistant-producer-10590","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"The Alley Theatre"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Houston","addressCountry":"US"}},"datePosted":"2026-08-07","validThrough":"2026-09-06T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":65000,"unitText":"YEAR"}},"image":"https://cloudimages2.broadwayworld.com/classifiedsphotos/nd1786128408_Alley_2_color_Logo_red-and-white-on_black.jpg?format=auto&width=1200"}},{"@type":"ListItem","position":21,"item":{"@type":"JobPosting","title":"Vocalist for New Texas Event Band","description":"Élan Artists is seeking exceptional vocalists for an exciting new premier event band based in Texas. We are looking for dynamic performers with strong stage presence, versatility, and the ability to engage audiences at weddings, corporate events, galas, and private celebrations. Entertaining with Élan Artists | www.elanartists.com | @elanartists Élan Artists represents some of the world's best event entertainers. Our premier bands travel nationally and internationally regularly, with our top ...","url":"https://www.broadwayworld.com/job/vocalist-for-new-texas-event-band-10550","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Elan Artists"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"","addressCountry":"US"}},"datePosted":"2026-07-27","validThrough":"2026-08-26T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","minValue":800,"maxValue":1000,"unitText":"WEEK"}}}},{"@type":"ListItem","position":22,"item":{"@type":"JobPosting","title":"Actor","description":"Emmanuel Episcopal Church Presents Auditions for Doubt: A Parable Audition Dates: Wednesday, August 19 (6:30-8:30 pm), Thursday, August 20 (6:30-8:30 pm), or Saturday, August 22 (10:00 am - Noon) Invited Callbacks: Wednesday, August 26 (6:30-8:30 pm) and/or Thursday, August 27 (6:30-8:30 pm) Location: Emmanuel Episcopal Church Address: 811 Cathedral St, Baltimore MD (use the main doors to the church) Compensation: Actors who are cast in a role will receive a $400 stipend for their participati...","url":"https://www.broadwayworld.com/job/actor-10579","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Theater at Emmanuel Episcopal"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Baltimore","addressCountry":"US"}},"datePosted":"2026-08-05","validThrough":"2026-08-19T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":400,"unitText":"WEEK"}}}},{"@type":"ListItem","position":23,"item":{"@type":"JobPosting","title":"“Shudder\" at 54 Below and \"The Showpeople Theatre Festival\"","description":"These productions are open to ages 18+. Productions take place in Manhattan, NY. Please fill out this form to the best of your ability. Questions? Concerns? Email us directly at showpeoplecollective@gmail.com Showpeople Theatre Collective is producing six musical concerts/productions in NYC this October to December at 54 Below and a TBA theatre in Long Island City, Queens. Shudder at 54 Below on October 28 and Musical Theatre Improv, Plan 9, Making Banks/Lost Justice Double Concert, To the Fa...","url":"https://www.broadwayworld.com/job/shudder-at-54-below-and-the-showpeople-theatre-festival-10596","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Showpeople Theatre Collective"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"New York","addressCountry":"US"}},"datePosted":"2026-08-09","validThrough":"2026-08-23T23:59:59-04:00"}},{"@type":"ListItem","position":24,"item":{"@type":"JobPosting","title":"Social Media & Content Intern – Performing Arts Tech | Performance Bonuses","description":"PerformrOS is looking for several creative, plugged-in social media interns who know the performing arts world and know what actually makes people stop scrolling. We’re building technology for actors, students, performers, theatre companies, production teams, and other people who live and work in the performing arts. Our products include PerformrGO, PerformrACT, PerformrSTAGE, PerformrSHOWCASE and more. We’re looking for interns who can help us turn those products — and the very real problems...","url":"https://www.broadwayworld.com/job/social-media-content-intern-performing-arts-tech-performance-bonuses-10595","employmentType":"INTERN","hiringOrganization":{"@type":"Organization","name":"PerformrOS"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"HOUSTON","addressCountry":"US"}},"datePosted":"2026-08-08","validThrough":"2026-08-22T23:59:59-04:00"}},{"@type":"ListItem","position":25,"item":{"@type":"JobPosting","title":"Bartender","description":"POSITION: Bartender DEPARTMENT: Operations REPORTS TO: Front of House Manager CLASSIFICATION: Part-time; Seasonal; Non-Exempt (eligible for overtime) COMPENSATION & BENEFITS: $19.00/hr base plus pooled tips; opportunity for premium rates when working designated events; paid sick and bereavement leave; staff holiday pay; access to participate in a 403(b) retirement plan; complimentary and discounted tickets; institutional professional development opportunities; free parking within walking dist...","url":"https://www.broadwayworld.com/job/bartender-10593","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"McCarter Theatre Center"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Princeton","addressCountry":"US"}},"datePosted":"2026-08-07","validThrough":"2026-08-21T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":19,"unitText":"HOUR"}}}},{"@type":"ListItem","position":26,"item":{"@type":"JobPosting","title":"Patron Attendant","description":"POSITION: Patron Attendant DEPARTMENT: Operations REPORTS TO: Front of House Manager CLASSIFICATION: Part-time; Seasonal; Non-Exempt (eligible for overtime) COMPENSATION & BENEFITS: $17.50/hr base; $19.75/hr when working Parking Attendant shifts; paid sick and bereavement leave; staff holiday pay; access to participate in a 403(b) retirement plan; complimentary and discounted tickets; institutional professional development opportunities; free parking within walking distance, and additional pe...","url":"https://www.broadwayworld.com/job/patron-attendant-10592","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"McCarter Theatre Center"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Princeton","addressCountry":"US"}},"datePosted":"2026-08-07","validThrough":"2026-08-21T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":17.5,"unitText":"HOUR"}}}},{"@type":"ListItem","position":27,"item":{"@type":"JobPosting","title":"House Manager","description":"POSITION: House Manager DEPARTMENT: Operations REPORTS TO: Front of House Manager CLASSIFICATION: Part-time; Seasonal; Non-Exempt (eligible for overtime) COMPENSATION & BENEFITS: $21.75/hr base; paid sick and bereavement leave; staff holiday pay; access to participate in a 403(b) retirement plan; complimentary and discounted tickets; institutional professional development opportunities; free parking within walking distance, and additional perks. LOCATION & SCHEDULE: This is an in-person posit...","url":"https://www.broadwayworld.com/job/house-manager-10591","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"McCarter Theatre Center"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Princeton","addressCountry":"US"}},"datePosted":"2026-08-07","validThrough":"2026-08-21T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":21.75,"unitText":"HOUR"}}}},{"@type":"ListItem","position":28,"item":{"@type":"JobPosting","title":"Learn Improv Fundamentals","description":"Have you always wanted to try out improv?Do you want to improve your improv skills?Do you need improv experience for your next gig?Then you’re in the right place!Most directors and writers want to cast actors with improv experience. Acting schools might teach a semester of improv. That’s usually not enough. Up your improv game and stay in performing shape: On Monday, August 17th at 7pm , I am holding a one time 60-90min Zoom class (length of session depends upon number of students) for $25 wh...","url":"https://www.broadwayworld.com/job/learn-improv-fundamentals-10587","employmentType":"OTHER","hiringOrganization":{"@type":"Organization","name":"Kissin Improv"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"New York","addressCountry":"US"}},"datePosted":"2026-08-06","validThrough":"2026-08-20T23:59:59-04:00"}},{"@type":"ListItem","position":29,"item":{"@type":"JobPosting","title":"Cinderella auditions","description":"A Magical Night for Auditions! Eight O’Clock Theatre is holding auditions for Cinderella SHOW: Rodgers and Hammerstein’s Cinderella AUDITION DATES: Sunday, August 23 & Monday, August 24 AUDITION TIME: 7:00 pm LOCATION: 105 Central Park Drive Largo, FL 33771 PERFORMANCE DATES: November 6-15, 2026 DIRECTOR: Troy Reamsnyder FOR MORE INFORMATION: Visit www.eightoclocktheatre.com CONTACT: info@eightoclocktheatre.com SHOW DESCRIPTION: This timeless tale comes to the EOT stage. A young woman, left i...","url":"https://www.broadwayworld.com/job/cinderella-auditions-10576","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Eight O'Clock Theatre"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Largo","addressCountry":"US"}},"datePosted":"2026-08-05","validThrough":"2026-08-19T23:59:59-04:00"}},{"@type":"ListItem","position":30,"item":{"@type":"JobPosting","title":"Chief Marketing Officer (CMO) – Theatre & Performing Arts","description":"An award-winning theater, is seeking a Chief Marketing Officer (CMO) to play a defining role in shaping the next chapter of audience growth and institutional visibility. As a key member of the senior leadership team, the CMO will lead an integrated strategy that drives earned revenue, strengthens the customer experience, elevates the brand, and positions the organization as a compelling cultural destination locally and nationally. This is an opportunity for a forward-looking marketing leader ...","url":"https://www.broadwayworld.com/job/chief-marketing-officer-cmo-theatre-performing-arts-10581","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Alliance Theatre"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Atlanta","addressCountry":"US"}},"datePosted":"2026-08-05","validThrough":"2026-08-19T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":135000,"unitText":"YEAR"}}}},{"@type":"ListItem","position":31,"item":{"@type":"JobPosting","title":"Dancers & Movement Artists","description":"ShaLeigh Dance Works is looking for Dancers & Movement Artists to help shape the future of our enVISION program! Application deadline: August 31, 2026 -- Based in Durham, North Carolina, ShaLeigh Dance Works (SDW) pioneers dance-theatre experiences that radically redesign what is possible in performance—advancing accessibility not as accommodation, but as artistic practice. -- enVISION is a disability-led dance-theatre initiative that explores accessibility as a source of artistic innovation....","url":"https://www.broadwayworld.com/job/dancers-movement-artists-10575","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"ShaLeigh Dance Works"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Durham","addressCountry":"US"}},"datePosted":"2026-08-04","validThrough":"2026-08-18T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":10,"unitText":"HOUR"}}}},{"@type":"ListItem","position":32,"item":{"@type":"JobPosting","title":"Operations Manager","description":"The Westside Theatre (an Off-Broadway commercial venue) seeks applicants for the position of Operations Manager. Ideal candidates will have at least five years of professional experience in theatre management, exhibit a professional and personable demeanor, possess an attention to detail, and demonstrate a proactive attitude toward problem solving. This is a full-time, in-person position. The Operations Manager reports directly to the General Manager, and is responsible for maintaining a high...","url":"https://www.broadwayworld.com/job/operations-manager-10573","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Reno Productions, Inc. dba Westside Theatre"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"New York","addressCountry":"US"}},"datePosted":"2026-08-03","validThrough":"2026-08-17T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":68900,"unitText":"YEAR"}}}},{"@type":"ListItem","position":33,"item":{"@type":"JobPosting","title":"Associate Dramaturg","description":"OVERVIEW Royal Family Productions is seeking an Associate Dramaturg for our Hairston Fellowship production. The Associate Dramaturg will work closely with our Director and Playwriting Fellow on developing and producing a brand new play centered around Black joy. ABOUT ROYAL FAMILY Located in the heart of Times Square, we incubate diverse new stories that may not have the chance to develop in a conventional environment. Bravery and fearlessness are imperative to our process: artists and audien...","url":"https://www.broadwayworld.com/job/associate-dramaturg-10572","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Royal Family Productions"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"New York","addressCountry":"US"}},"datePosted":"2026-08-03","validThrough":"2026-08-17T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":500,"unitText":"WEEK"}}}},{"@type":"ListItem","position":34,"item":{"@type":"JobPosting","title":"Stage Director","description":"Stage Director for a production of Gilbert and Sullivan's The Mikado, performed by the Troupers Light Opera Company of Norwalk, Connecticut, trouperslightopera.org. Show dates: April 10-11 and 17-18, 2027. Casting auditions in November 2026. The Stage Director will create all of the blocking and choreography for principals and choruses, and will rehearse the entire cast. Rehearsals begin in early January: three days a week, Monday and Wednesdays 7:00-10:00 p.m.; Saturdays 11:00-2:00. All rehe...","url":"https://www.broadwayworld.com/job/stage-director-10569","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Troupers Light Opera"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Norwalk","addressCountry":"US"}},"datePosted":"2026-08-02","validThrough":"2026-08-16T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":3000,"unitText":"WEEK"}}}},{"@type":"ListItem","position":35,"item":{"@type":"JobPosting","title":"Bartender","description":"Job Title: Bartender Department: General Management Reports to: Café and Bar Manager Effective Date: 08/01/26 Hourly Wage: $18 per hour (Plus Tips) No Remote Work Available Job Summary Signature Theatre, one of New York’s leading Off-Broadway theatres, is seeking BARTENDERS at The Pershing Square Signature Center on West 42nd Street. We expect the position to begin around August 7th, 2026. Weekend availability is required, most shifts will take place Friday, Saturday, and Sunday. Duties Respo...","url":"https://www.broadwayworld.com/job/bartender-10566","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Signature Theatre"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"New York","addressCountry":"US"}},"datePosted":"2026-07-31","validThrough":"2026-08-14T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":18,"unitText":"HOUR"}}}},{"@type":"ListItem","position":36,"item":{"@type":"JobPosting","title":"Touring Wardrobe Supervisor","description":"MEP, the producing and general management company behind The Hip Hop Nutcracker, is seeking a touring Wardrobe Supervisor for the show's upcoming national tour. This position leads the wardrobe department on the road and serves as the costume point person for each venue. This position reports to the Production Manager, Company Manager, PSM Key Responsibilities -Travel with the company on all tour engagements; coordinate with venue wardrobe staff at each stop -Pull, organize, label, and prepar...","url":"https://www.broadwayworld.com/job/touring-wardrobe-supervisor-10568","employmentType":"CONTRACTOR","hiringOrganization":{"@type":"Organization","name":"Hip Hop Nutcracker"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"New York","addressCountry":"US"}},"datePosted":"2026-07-31","validThrough":"2026-08-14T23:59:59-04:00","baseSalary":{"@type":"MonetaryAmount","currency":"USD","value":{"@type":"QuantitativeValue","value":1200,"unitText":"WEEK"}}}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Broadway Jobs + Theatre Classifieds","url":"https://www.broadwayworld.com/classifieds-jobs/","description":"Find theatre jobs and classifieds on BroadwayWorld. Browse job listings for actors, stage managers, designers, crew, and more in New York City and beyond.","isPartOf":{"@type":"WebSite","name":"BroadwayWorld","url":"https://www.broadwayworld.com/"},"about":{"@type":"Thing","name":"Theatre Jobs and Classifieds"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How can I add my job listing?","acceptedAnswer":{"@type":"Answer","text":"You can submit your free job listing <a href=\"https://www.broadwayworld.com/classifieds-jobs/addclassifieds.php\">here</a>."}},{"@type":"Question","name":"What is included in a premium listing?","acceptedAnswer":{"@type":"Answer","text":"Premium listings include a photo, appear highlighted above Standard listings, are featured on the Industry homepage Hiring Now module, and are promoted in BWW e-newsletters. Choose 14 days ($25) or 30 days ($40), and track views, apply clicks, and CTR from your listing dashboard. <a href=\"https://www.broadwayworld.com/classifieds-jobs/addclassifieds.php\">Submit a premium job listing</a>."}},{"@type":"Question","name":"How do I apply for a listed job or internship?","acceptedAnswer":{"@type":"Answer","text":"Each job will include specific details on how to apply including any applicable deadlines or requirements."}},{"@type":"Question","name":"What are the requirements for posting a theatre job on BroadwayWorld's Classifieds?","acceptedAnswer":{"@type":"Answer","text":"BroadwayWorld requires details on the position, and a salary range to add a listing to our Classifieds."}},{"@type":"Question","name":"I'm a student looking to work on Broadway - where can I learn more?","acceptedAnswer":{"@type":"Answer","text":"You can browse all of BroadwayWorld's educational initiatives, including resources for Elementary, Middle, Highschool, as well as our database of college programs and scholarships for all types of Broadway jobs, from performing to marketing, technical, and more - <a href=\"https://www.broadwayworld.com/student-center/\">here</a>."}}]}</script>
+
+<main class="inner-page classified-jobs" id="main-content">
+    <div class="container">
+        <div class="bww-page-hero">
+    <div class="bww-page-hero__inner">
+        <div class="bww-page-hero__title-wrap">
+            <h1 class="bww-page-hero__title">Broadway Jobs + Theatre Classifieds</h1>
+                    </div>
+                <div class="bww-page-hero__aside">
+            <form class="jobs-alert-signup jobs-alert-signup--hero" aria-label="Sign up for job alerts" action="/classifieds-jobs/classsubscribe.php?add=on&amp;newtracker=60" method="post" onsubmit="if(typeof gtag==='function'){gtag('event','Register',{'event_category':'Register','event_label':'Classifieds','value':'Classifieds'});}">
+        <label for="signupjobs-top" class="jobs-alert-signup__label">Job Alerts</label>
+            <div class="jobs-alert-signup__fields">
+        <input name="email" type="email" id="signupjobs-top" class="bww-input" placeholder="Email address" aria-label="Email for job alerts" required autocomplete="email">
+        <select name="typer" class="bww-select" aria-label="Alert frequency">
+                        <option selected value="1">Daily</option>
+            <option value="2">Weekly</option>
+                    </select>
+                <button type="submit" class="bww-btn bww-btn--primary bww-btn--sm">Sign Up</button>
+            </div>
+</form>
+        </div>
+            </div>
+</div>
+        <div class="container pt-20">
+            <div class="row">
+                <div class="col-lg-2 most-popular l-side pl-0">
+                       
+           
+           
+   <aside>
+
+     <div class="section-tittle bww-sidebar-heading">
+                <p class="y-color bww-sidebar-heading__label">Most Popular</p>
+              </div>
+              
+              
+              
+              <!--pop:3-Broadway-Shows-Close-This-Weekend-20260808-->  
+  
+  
+  
+  			  <div class="popular-single">
+                    <a class="title-14"  href="https://www.broadwayworld.com/article/3-Broadway-Shows-Close-This-Weekend-20260808">
+<img width="178" height="100" loading="lazy" src="https://cloudimages2.broadwayworld.com/columnpiccloud/3-Broadway-Shows-Close-This-Weekend-1785852275.jpg?format=auto&width=400" srcset="https://cloudimages2.broadwayworld.com/columnpiccloud/3-Broadway-Shows-Close-This-Weekend-1785852275.jpg?format=auto&width=400 672w, https://cloudimages2.broadwayworld.com/columnpiccloud/3-Broadway-Shows-Close-This-Weekend-1785852275.jpg?format=auto&width=336 336w" alt="3 Broadway Shows Close This Weekend Photo" style="height:auto;">
+                    					<span class="number">1</span>
+                 3 Broadway Shows Close This Weekend</a>
+                </div>
+  <!--/pop:3-Broadway-Shows-Close-This-Weekend-20260808-->
+
+
+
+
+  <!--pop:David-Hyde-Pierce-Danielle-Brooks-Ayo-Edebiri-and-Jin-Ha-Will-Lead-YOURE-A-GOOD-MAN-CHARLIE-BROWN-at-Encores-20260806-->  
+  
+  
+  
+  			  <div class="popular-single">
+                    <a class="title-14"  href="https://www.broadwayworld.com/article/David-Hyde-Pierce-Danielle-Brooks-Ayo-Edebiri-and-Jin-Ha-Will-Lead-YOURE-A-GOOD-MAN-CHARLIE-BROWN-at-Encores-20260806">
+<img width="178" height="100" loading="lazy" src="https://cloudimages2.broadwayworld.com/columnpiccloud/David-Hyde-Pierce-Danielle-Brooks-Ayo-Edebiri-and-Jin-Ha-Will-Lead-YOU-RE-A-GOD-MAN-CHARLIE-BROWN-at-Encores--1786031611.jpg?format=auto&width=400" srcset="https://cloudimages2.broadwayworld.com/columnpiccloud/David-Hyde-Pierce-Danielle-Brooks-Ayo-Edebiri-and-Jin-Ha-Will-Lead-YOU-RE-A-GOD-MAN-CHARLIE-BROWN-at-Encores--1786031611.jpg?format=auto&width=400 672w, https://cloudimages2.broadwayworld.com/columnpiccloud/David-Hyde-Pierce-Danielle-Brooks-Ayo-Edebiri-and-Jin-Ha-Will-Lead-YOU-RE-A-GOD-MAN-CHARLIE-BROWN-at-Encores--1786031611.jpg?format=auto&width=336 336w" alt="David Hyde Pierce, Danielle Brooks, Ayo Edebiri and Jin Ha Will Lead YOU'RE A GOOD MAN, CH Photo" style="height:auto;">
+                    					<span class="number">2</span>
+                 David Hyde Pierce, Danielle Brooks, Ayo Edebiri and Jin Ha Will Lead YOU'RE A GOOD MAN, CHARLIE BROWN at Encores!</a>
+                </div>
+  <!--/pop:David-Hyde-Pierce-Danielle-Brooks-Ayo-Edebiri-and-Jin-Ha-Will-Lead-YOURE-A-GOOD-MAN-CHARLIE-BROWN-at-Encores-20260806-->
+
+
+
+
+  <!--pop:Exclusive-From-NEWSIES-to-Nursing-Why-Garett-Hawe-Left-Broadway-Behind-for-a-New-Career-20260805-->  
+  
+  
+  
+  			  <div class="popular-single">
+                    <a class="title-14"  href="https://www.broadwayworld.com/article/Exclusive-From-NEWSIES-to-Nursing-Why-Garett-Hawe-Left-Broadway-Behind-for-a-New-Career-20260805">
+<img width="178" height="100" loading="lazy" src="https://cloudimages2.broadwayworld.com/columnpiccloud/Exclusive-From-NEWSIES-to-Nursing-Why-Garett-Hawe-Left-Broadway-Behind-for-a-New-Career-1785941812.jpg?format=auto&width=400" srcset="https://cloudimages2.broadwayworld.com/columnpiccloud/Exclusive-From-NEWSIES-to-Nursing-Why-Garett-Hawe-Left-Broadway-Behind-for-a-New-Career-1785941812.jpg?format=auto&width=400 672w, https://cloudimages2.broadwayworld.com/columnpiccloud/Exclusive-From-NEWSIES-to-Nursing-Why-Garett-Hawe-Left-Broadway-Behind-for-a-New-Career-1785941812.jpg?format=auto&width=336 336w" alt="Exclusive: From NEWSIES to Nursing, Why Garett Hawe Left Broadway Behind for a New Career Photo" style="height:auto;">
+                    					<span class="number">3</span>
+                 Exclusive: From NEWSIES to Nursing, Why Garett Hawe Left Broadway Behind for a New Career</a>
+                </div>
+  <!--/pop:Exclusive-From-NEWSIES-to-Nursing-Why-Garett-Hawe-Left-Broadway-Behind-for-a-New-Career-20260805-->
+
+
+
+
+  <!--pop:Exclusive-Aliya-Grace-Will-Lead-the-BOOP-National-Tour--Meet-the-Rising-Star-20260803-->  
+  
+  
+  
+  			  <div class="popular-single">
+                    <a class="title-14"  href="https://www.broadwayworld.com/article/Exclusive-Aliya-Grace-Will-Lead-the-BOOP-National-Tour--Meet-the-Rising-Star-20260803">
+<img width="178" height="100" loading="lazy" src="https://cloudimages2.broadwayworld.com/columnpiccloud/BOOP--1785522028.jpg?format=auto&width=400" srcset="https://cloudimages2.broadwayworld.com/columnpiccloud/BOOP--1785522028.jpg?format=auto&width=400 672w, https://cloudimages2.broadwayworld.com/columnpiccloud/BOOP--1785522028.jpg?format=auto&width=336 336w" alt="Exclusive: Aliya Grace Will Lead the BOOP! National Tour- Meet the Rising Star Photo" style="height:auto;">
+                    					<span class="number">4</span>
+                 Exclusive: Aliya Grace Will Lead the BOOP! National Tour- Meet the Rising Star</a>
+                </div>
+  <!--/pop:Exclusive-Aliya-Grace-Will-Lead-the-BOOP-National-Tour--Meet-the-Rising-Star-20260803-->
+
+
+
+
+  
+
+
+
+<br>                
+  <div class="add-row left-ad1" style="height: 600px;">
+<div id="ezoic-pub-ad-placeholder-101" style="height: 600px;" >
+<div id=div-gpt-ad-1442371043694-2 style="height: 600px;" >
+<script>googletag.cmd.push(function(){googletag.display('div-gpt-ad-1442371043694-2');});
+</script>
+</div>
+</div>
+</div>
+
+
+
+</aside>
+                </div>
+                <div class="col-lg-7 mobile1 pl-5 pr-5" style="padding-right:25px!important;">
+                    <p>Find listings for theater jobs, internships as well including administrative positions and creative jobs as well as Broadway and regional theatre career help. Browse listings below and jumpstart your theater career today.</p>
+
+                    <div class="bww-filters-panel">
+                    <form class="bww-search-row" aria-label="Search Classifieds" action="/classifieds-jobs/" method="get">
+                                                                                                <input type="text" class="bww-input" name="q" value="" placeholder="Search jobs..." aria-label="Search jobs">
+                        <button type="submit" class="bww-btn bww-btn--primary">Search</button>
+                        <a href="/classifieds-jobs/addclassifieds.php" class="bww-btn bww-btn--dark bww-btn--sm">Post a Job</a>
+                    </form>
+
+                    <div class="bww-filter-bar bww-filter-bar--chips" aria-label="Category filters">
+                                                <a href="/classifieds-jobs/" class="bww-chip bww-chip--sm bww-chip--active">All</a>
+                                                <a href="/classifieds-jobs/?type=Administrative" class="bww-chip bww-chip--sm">Administrative</a>
+                                                <a href="/classifieds-jobs/?type=Creative" class="bww-chip bww-chip--sm">Creative</a>
+                                                <a href="/classifieds-jobs/?type=Classes" class="bww-chip bww-chip--sm">Classes</a>
+                                                <a href="/classifieds-jobs/?type=Crew" class="bww-chip bww-chip--sm">Crew</a>
+                                                <a href="/classifieds-jobs/?type=Non+Theatrical" class="bww-chip bww-chip--sm">Non Theatrical</a>
+                                            </div>
+
+                    <form aria-label="Filter listings" name="filterForm" action="/classifieds-jobs/" method="get" class="bww-filter-bar bww-filter-bar--tools">
+                                                <select name="intern" class="bww-select bww-select--inline" aria-label="Intern filter" onchange="this.form.submit()">
+                            <option value="All" selected>All listings</option>
+                            <option value="only">Internships only</option>
+                            <option value="none">No internships</option>
+                        </select>
+                        <select name="sort" class="bww-select bww-select--inline" aria-label="Sort order" onchange="this.form.submit()">
+                            <option value="newest" selected>Newest first</option>
+                            <option value="expiring">Expiring soon</option>
+                        </select>
+                        <a href="/classifieds-jobs/directory3.php" class="bww-btn bww-btn--ghost bww-btn--sm">Browse categories</a>
+                    </form>
+
+                    <form aria-label="Filter by location" action="/classifieds-jobs/" method="post" class="bww-filter-bar bww-filter-bar--location">
+                        <select name="city" class="bww-select bww-select--inline" aria-label="Location" onchange="if(this.value!=='All'){this.form.submit();}">
+                            <option value="All">All locations</option>
+                                                        <option value="Atlanta">Atlanta</option>
+                                                        <option value="Austin">Austin</option>
+                                                        <option value="Baltimore">Baltimore</option>
+                                                        <option value="Broadway">Broadway</option>
+                                                        <option value="Central-New-York">Central New York</option>
+                                                        <option value="Chicago">Chicago</option>
+                                                        <option value="Houston">Houston</option>
+                                                        <option value="Los-Angeles">Los Angeles</option>
+                                                        <option value="New-York-City">New York City</option>
+                                                        <option value="Raleigh">Raleigh</option>
+                                                        <option value="Tampa">Tampa</option>
+                                                    </select>
+                    </form>
+                    </div><!-- /bww-filters-panel -->
+
+                    
+
+    <section class="bww-listings-section">
+        <h2 class="bww-section-title">Featured Listings</h2>
+        <div class="bww-card-list">
+            <article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/production-manager-10539">Production Manager</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">A.C.T. of Connecticut</p>
+                  <p class="bww-card__meta">RIDGEFIELD, CT · Posted Jul 24, 2026 · Closes in 13 days</p>
+                  <p class="bww-card__salary">$62,000-$68,000/annually</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-admin" class="bww-chip bww-chip--sm">Full Time - Administrative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/costume-director-10544">Costume Director </a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">The Atlanta Opera</p>
+                  <p class="bww-card__meta">Atlanta, GA · Posted Jul 27, 2026 · Closes in 16 days</p>
+                  <p class="bww-card__salary">$80000-90000</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-creative" class="bww-chip bww-chip--sm">Full Time - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/faculty-dance-ballet-10564">Faculty, Dance (Ballet)</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Miami Dade College</p>
+                  <p class="bww-card__meta">Miami, FL · Posted Jul 31, 2026 · Closes in 20 days</p>
+                  <p class="bww-card__salary">$53,274 - $65,370 (annual)</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-admin" class="bww-chip bww-chip--sm">Full Time - Administrative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/now-casting-the-cat-in-the-hat-national-tour-10594">Now Casting: The Cat in the Hat National Tour</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Showcase Entertainment Group</p>
+                  <p class="bww-card__meta">Manhatten , NY · Posted 2 days ago · Closes in 28 days</p>
+                  <p class="bww-card__salary">$800.00 – $1,000.00 per week</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/temp-jobs-creative" class="bww-chip bww-chip--sm">Temp - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/actor-10580">Actor</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Theater at Emmanuel Episcopal</p>
+                  <p class="bww-card__meta">Baltimore, MD · Posted 5 days ago · Closes in 25 days</p>
+                  <p class="bww-card__salary">$400 Stipend for Auditions/Performances</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/temp-jobs-creative" class="bww-chip bww-chip--sm">Temp - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/stage-manager-10582">Stage Manager</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Arizona Broadway Theatre</p>
+                  <p class="bww-card__meta">PEORIA, AZ · Posted 4 days ago · Closes in 26 days</p>
+                  <p class="bww-card__salary">$45,000-$50,000/year</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-crew" class="bww-chip bww-chip--sm">Full Time - Crew</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/songwriter-wanted-10574">Songwriter wanted </a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Chameleon: A New Musical </p>
+                  <p class="bww-card__meta">Whittier, CA · Posted 6 days ago · Closes in 24 days</p>
+                  <p class="bww-card__salary">$700-$1,000 per song</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-creative" class="bww-chip bww-chip--sm">Full Time - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/director-of-development-10547">Director of Development</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Ballet Hispánico via TOC Arts Partners</p>
+                  <p class="bww-card__meta">New York, NY · Posted Jul 27, 2026 · Closes in 16 days</p>
+                  <p class="bww-card__salary">$150,000-170,000</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-admin" class="bww-chip bww-chip--sm">Full Time - Administrative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/it-manager-10571">IT Manager</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">The Shed</p>
+                  <p class="bww-card__meta">New York, NY · Posted 7 days ago · Closes in 23 days</p>
+                  <p class="bww-card__salary">$115,000 – $125,000/year</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-admin" class="bww-chip bww-chip--sm">Full Time - Administrative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/project-manager-10481">Project Manager</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Tom Carroll Scenery</p>
+                  <p class="bww-card__meta">Jersey City, NJ · Posted Jul 14, 2026 · Closes in 3 days</p>
+                  <p class="bww-card__salary">$60,000–$80,000 annually, based on experience</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-crew" class="bww-chip bww-chip--sm">Full Time - Crew</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/off-b-way-a-soulful-christmas-returns-for-year-10-singers-dancers-10570">OFF B-WAY A SOULFUL CHRISTMAS RETURNS FOR YEAR 10! SINGERS &amp; DANCERS</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">KENDRELL BOWMAN PRODUCTIONS LLC </p>
+                  <p class="bww-card__meta">NEW YORK , NY · Posted 3 days ago · Closes in 27 days</p>
+                  <p class="bww-card__salary">$750-800</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-creative" class="bww-chip bww-chip--sm">Full Time - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/managing-director-10476">Managing Director</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Texas Performing Arts</p>
+                  <p class="bww-card__meta">Austin, TX · Posted Jul 13, 2026 · Closes in 2 days</p>
+                  <p class="bww-card__salary">$150,000</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-admin" class="bww-chip bww-chip--sm">Full Time - Administrative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/senior-director-production-10565">Senior Director, Production</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Lincoln Center for the Performing Arts via TOC Arts Partners</p>
+                  <p class="bww-card__meta">New York, NY · Posted Jul 31, 2026 · Closes in 20 days</p>
+                  <p class="bww-card__salary">$215,000-250,000</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-admin" class="bww-chip bww-chip--sm">Full Time - Administrative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/executive-director-10589">Executive Director</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Gallo Center For The Arts</p>
+                  <p class="bww-card__meta">Modesto, CA · Posted 3 days ago · Closes in 27 days</p>
+                  <p class="bww-card__salary">$190,000-220,000</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-admin" class="bww-chip bww-chip--sm">Full Time - Administrative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/director-10586">Director</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Troupers Light Opera</p>
+                  <p class="bww-card__meta">Norwalk, CT · Posted 4 days ago · Closes in 26 days</p>
+                  <p class="bww-card__salary">$2500-$3000</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/part-time-jobs-creative" class="bww-chip bww-chip--sm">Part Time - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/artistic-director-studio-theatre-working-with-management-consultants-for-the-arts-10505">Artistic Director-Studio Theatre working with Management Consultants for the Arts</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Studio Theatre</p>
+                  <p class="bww-card__meta">Washington, DC · Posted Jul 21, 2026 · Closes in 10 days</p>
+                  <p class="bww-card__salary">$195,000 - $210,000</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-creative" class="bww-chip bww-chip--sm">Full Time - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/technical-designer-10483">Technical Designer</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Tom Carroll Scenery</p>
+                  <p class="bww-card__meta">Jersey City, NJ · Posted Jul 15, 2026 · Closes in 4 days</p>
+                  <p class="bww-card__salary">$50,000–$65,000 annually, based on experience</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-crew" class="bww-chip bww-chip--sm">Full Time - Crew</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/full-time-master-carpenter-10484">Full-Time Master Carpenter</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Tom Carroll Scenery</p>
+                  <p class="bww-card__meta">Jersey City, NJ · Posted Jul 16, 2026 · Closes in 5 days</p>
+                  <p class="bww-card__salary">Pay: $30–$38 per hour, based on experience</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-crew" class="bww-chip bww-chip--sm">Full Time - Crew</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/theater-manager-lct3-claire-tow-theater-at-lincoln-center-theater-10557">  Theater Manager LCT3/Claire Tow Theater at Lincoln Center Theater </a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Lincoln Center Theater</p>
+                  <p class="bww-card__meta">New York, NY · Posted Jul 29, 2026 · Closes in 18 days</p>
+                  <p class="bww-card__salary">$68,848 - $82,000</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-admin" class="bww-chip bww-chip--sm">Full Time - Administrative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner bww-card__inner--thumb">
+    <img src="https://cloudimages2.broadwayworld.com/classifiedsphotos/nd1786128408_Alley_2_color_Logo_red-and-white-on_black.jpg?format=auto&amp;width=200" alt="" class="bww-card__thumb" loading="lazy" width="72" height="72">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/assistant-producer-10590">Assistant Producer</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">The Alley Theatre</p>
+                  <p class="bww-card__meta">Houston, TX · Posted 3 days ago · Closes in 27 days</p>
+                  <p class="bww-card__salary">$65,000/annual</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-admin" class="bww-chip bww-chip--sm">Full Time - Administrative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/vocalist-for-new-texas-event-band-10550">Vocalist for New Texas Event Band</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Elan Artists</p>
+                  <p class="bww-card__meta">Posted Jul 27, 2026 · Closes in 16 days</p>
+                  <p class="bww-card__salary">$800-1000 per show</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/part-time-jobs-creative" class="bww-chip bww-chip--sm">Part Time - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card bww-card--featured">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/actor-10579">Actor</a>
+        </h3>
+                <span class="bww-badge bww-badge--featured">Featured</span>
+              </div>
+            <p class="bww-card__company">Theater at Emmanuel Episcopal</p>
+                  <p class="bww-card__meta">Baltimore, MD · Posted 5 days ago · Closes in 9 days</p>
+                  <p class="bww-card__salary">$400 Stipend for Auditions/Performances</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/temp-jobs-creative" class="bww-chip bww-chip--sm">Temp - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+        </div>
+    </section>
+    <div class="mv_slot_target_mobile" data-slot="Content"></div>
+
+    <section class="bww-listings-section">
+        <h2 class="bww-section-title">Latest Listings</h2>
+        <div class="bww-card-list">
+                <h3 class="bww-date-header">Sunday August 9, 2026</h3>
+        <article class="bww-card">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/shudder-at-54-below-and-the-showpeople-theatre-festival-10596">“Shudder&quot; at 54 Below and &quot;The Showpeople Theatre Festival&quot;</a>
+        </h3>
+              </div>
+            <p class="bww-card__company">Showpeople Theatre Collective</p>
+                  <p class="bww-card__meta">New York, NY · Posted 1 day ago · Closes in 13 days</p>
+                        <div class="bww-card__footer">
+                        <a href="/jobs/temp-jobs-creative" class="bww-chip bww-chip--sm">Temp - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+        <h3 class="bww-date-header">Saturday August 8, 2026</h3>
+        <article class="bww-card">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/social-media-content-intern-performing-arts-tech-performance-bonuses-10595">Social Media &amp; Content Intern – Performing Arts Tech | Performance Bonuses</a>
+        </h3>
+              </div>
+            <p class="bww-card__company">PerformrOS</p>
+                  <p class="bww-card__meta">HOUSTON, TX · Posted 2 days ago · Closes in 12 days</p>
+                        <div class="bww-card__footer">
+                <span class="bww-badge bww-badge--intern">Intern</span>
+                        <a href="/jobs/internships-creative" class="bww-chip bww-chip--sm">Internships - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+        <h3 class="bww-date-header">Friday August 7, 2026</h3>
+        <article class="bww-card">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/bartender-10593">Bartender</a>
+        </h3>
+              </div>
+            <p class="bww-card__company">McCarter Theatre Center</p>
+                  <p class="bww-card__meta">Princeton, NJ · Posted 3 days ago · Closes in 11 days</p>
+                  <p class="bww-card__salary">$19/hr base plus pooled tips</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/part-time-jobs-admin" class="bww-chip bww-chip--sm">Part Time - Administrative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/patron-attendant-10592">Patron Attendant</a>
+        </h3>
+              </div>
+            <p class="bww-card__company">McCarter Theatre Center</p>
+                  <p class="bww-card__meta">Princeton, NJ · Posted 3 days ago · Closes in 11 days</p>
+                  <p class="bww-card__salary">$17.50/hr base; $19.75/hr when working Parking Atte…</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/part-time-jobs-admin" class="bww-chip bww-chip--sm">Part Time - Administrative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/house-manager-10591">House Manager</a>
+        </h3>
+              </div>
+            <p class="bww-card__company">McCarter Theatre Center</p>
+                  <p class="bww-card__meta">Princeton, NJ · Posted 3 days ago · Closes in 11 days</p>
+                  <p class="bww-card__salary">$21.75/hr</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/part-time-jobs-admin" class="bww-chip bww-chip--sm">Part Time - Administrative</a>
+              </div>
+    </div>
+  </div>
+</article>
+        <h3 class="bww-date-header">Thursday August 6, 2026</h3>
+        <article class="bww-card">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/learn-improv-fundamentals-10587">Learn Improv Fundamentals</a>
+        </h3>
+              </div>
+            <p class="bww-card__company">Kissin Improv</p>
+                  <p class="bww-card__meta">New York, NY · Posted 4 days ago · Closes in 10 days</p>
+                        <div class="bww-card__footer">
+                        <a href="/jobs/classes" class="bww-chip bww-chip--sm">Classes / Instruction</a>
+              </div>
+    </div>
+  </div>
+</article>
+        <h3 class="bww-date-header">Wednesday August 5, 2026</h3>
+        <article class="bww-card">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/cinderella-auditions-10576">Cinderella auditions</a>
+        </h3>
+              </div>
+            <p class="bww-card__company">Eight O&#039;Clock Theatre</p>
+                  <p class="bww-card__meta">Largo, FL · Posted 5 days ago · Closes in 9 days</p>
+                        <div class="bww-card__footer">
+                        <a href="/jobs/part-time-jobs-creative" class="bww-chip bww-chip--sm">Part Time - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/chief-marketing-officer-cmo-theatre-performing-arts-10581">Chief Marketing Officer (CMO) – Theatre &amp; Performing Arts</a>
+        </h3>
+              </div>
+            <p class="bww-card__company">Alliance Theatre</p>
+                  <p class="bww-card__meta">Atlanta, GA · Posted 5 days ago · Closes in 9 days</p>
+                  <p class="bww-card__salary">$135,000 - $150,000</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-non-theatrical" class="bww-chip bww-chip--sm">Full Time - Non Theatrical</a>
+              </div>
+    </div>
+  </div>
+</article>
+        <h3 class="bww-date-header">Tuesday August 4, 2026</h3>
+        <article class="bww-card">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/dancers-movement-artists-10575">Dancers &amp; Movement Artists</a>
+        </h3>
+              </div>
+            <p class="bww-card__company">ShaLeigh Dance Works</p>
+                  <p class="bww-card__meta">Durham, NC · Posted 6 days ago · Closes in 8 days</p>
+                  <p class="bww-card__salary">Rehearsals are paid at $10–$15/hour and performance…</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/part-time-jobs-creative" class="bww-chip bww-chip--sm">Part Time - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+        <h3 class="bww-date-header">Monday August 3, 2026</h3>
+        <article class="bww-card">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/operations-manager-10573">Operations Manager</a>
+        </h3>
+              </div>
+            <p class="bww-card__company">Reno Productions, Inc. dba Westside Theatre</p>
+                  <p class="bww-card__meta">New York, NY · Posted 7 days ago · Closes in 7 days</p>
+                  <p class="bww-card__salary">$68,900 annually</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-admin" class="bww-chip bww-chip--sm">Full Time - Administrative</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/associate-dramaturg-10572">Associate Dramaturg</a>
+        </h3>
+              </div>
+            <p class="bww-card__company">Royal Family Productions</p>
+                  <p class="bww-card__meta">New York, NY · Posted 7 days ago · Closes in 7 days</p>
+                  <p class="bww-card__salary">$500 Stipend</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/temp-jobs-creative" class="bww-chip bww-chip--sm">Temp - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+        <h3 class="bww-date-header">Sunday August 2, 2026</h3>
+        <article class="bww-card">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/stage-director-10569">Stage Director</a>
+        </h3>
+              </div>
+            <p class="bww-card__company">Troupers Light Opera</p>
+                  <p class="bww-card__meta">Norwalk, CT · Posted Aug 2, 2026 · Closes in 6 days</p>
+                  <p class="bww-card__salary">$3000 stipend</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/part-time-jobs-creative" class="bww-chip bww-chip--sm">Part Time - Creative</a>
+              </div>
+    </div>
+  </div>
+</article>
+        <h3 class="bww-date-header">Friday July 31, 2026</h3>
+        <article class="bww-card">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/bartender-10566">Bartender</a>
+        </h3>
+              </div>
+            <p class="bww-card__company">Signature Theatre</p>
+                  <p class="bww-card__meta">New York, NY · Posted Jul 31, 2026 · Closes in 4 days</p>
+                  <p class="bww-card__salary">$18/hour</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/full-time-jobs-non-theatrical" class="bww-chip bww-chip--sm">Full Time - Non Theatrical</a>
+              </div>
+    </div>
+  </div>
+</article>
+<article class="bww-card">
+  <div class="bww-card__inner">
+    <div class="bww-card__body">
+      <div class="bww-card__head">
+        <h3 class="bww-card__title">
+          <a href="/job/touring-wardrobe-supervisor-10568">Touring Wardrobe Supervisor</a>
+        </h3>
+              </div>
+            <p class="bww-card__company">Hip Hop Nutcracker</p>
+                  <p class="bww-card__meta">New York, NY · Posted Jul 31, 2026 · Closes in 4 days</p>
+                  <p class="bww-card__salary">$1200 per week</p>
+                  <div class="bww-card__footer">
+                        <a href="/jobs/temp-jobs-crew" class="bww-chip bww-chip--sm">Temp - Crew</a>
+              </div>
+    </div>
+  </div>
+</article>
+        </div>
+    </section>
+    <div class="mv_slot_target_mobile" data-slot="Content"></div>
+
+<div class="bww-pagination"><b>Page:</b> <strong>1</strong> <a href="/classifieds-jobs/?page=2">2</a> <a href="/classifieds-jobs/?page=3">3</a> </div>
+
+<br>
+<section class="ques-row pt-30">
+    <div class="section-tittle mb-3">
+        <h2>Frequently Asked Questions</h2>
+    </div>
+        <div class="ques-ans">
+        <h3>How can I add my job listing?</h3>
+        <div class="ans"><p>You can submit your free job listing <a href="https://www.broadwayworld.com/classifieds-jobs/addclassifieds.php">here</a>.</p></div>
+    </div>
+        <div class="ques-ans">
+        <h3>What is included in a premium listing?</h3>
+        <div class="ans"><p>Premium listings include a photo, appear highlighted above Standard listings, are featured on the Industry homepage Hiring Now module, and are promoted in BWW e-newsletters. Choose 14 days ($25) or 30 days ($40), and track views, apply clicks, and CTR from your listing dashboard. <a href="https://www.broadwayworld.com/classifieds-jobs/addclassifieds.php">Submit a premium job listing</a>.</p></div>
+    </div>
+        <div class="ques-ans">
+        <h3>How do I apply for a listed job or internship?</h3>
+        <div class="ans"><p>Each job will include specific details on how to apply including any applicable deadlines or requirements.</p></div>
+    </div>
+        <div class="ques-ans">
+        <h3>What are the requirements for posting a theatre job on BroadwayWorld&#039;s Classifieds?</h3>
+        <div class="ans"><p>BroadwayWorld requires details on the position, and a salary range to add a listing to our Classifieds.</p></div>
+    </div>
+        <div class="ques-ans">
+        <h3>I&#039;m a student looking to work on Broadway - where can I learn more?</h3>
+        <div class="ans"><p>You can browse all of BroadwayWorld's educational initiatives, including resources for Elementary, Middle, Highschool, as well as our database of college programs and scholarships for all types of Broadway jobs, from performing to marketing, technical, and more - <a href="https://www.broadwayworld.com/student-center/">here</a>.</p></div>
+    </div>
+    </section>
+
+<div class="jobs-alert-signup-footer"><form class="jobs-alert-signup jobs-alert-signup--footer" aria-label="Sign up for job alerts" action="/classifieds-jobs/classsubscribe.php?add=on&amp;newtracker=60" method="post" onsubmit="if(typeof gtag==='function'){gtag('event','Register',{'event_category':'Register','event_label':'Classifieds','value':'Classifieds'});}">
+        <div class="jobs-alert-signup__intro">
+        <label for="signupjobs-bottom" class="jobs-alert-signup__label">Find your next theatre job</label>
+        <p class="bww-field-hint">Get Broadway, national, and theatre job listings delivered to your inbox.</p>
+    </div>
+            <div class="jobs-alert-signup__fields jobs-alert-signup__fields--grid">
+        <input name="email" type="email" id="signupjobs-bottom" class="bww-input jobs-alert-signup__field--full" placeholder="Email address" aria-label="Email for job alerts" required autocomplete="email">
+        <select name="typer" class="bww-select" aria-label="Alert frequency">
+                        <option selected value="1">Daily</option>
+            <option value="2">Weekly</option>
+                    </select>
+                <div class="jobs-alert-signup__fields-actions">
+            <button type="submit" class="bww-btn bww-btn--primary">Get Job Alerts</button>
+        </div>
+            </div>
+</form>
+</div>
+                </div><!-- /col-lg-7 -->
+
+                <!-- Right Sidebar -->
+                <script>window.bww=window.bww||{};window.bww.article={"articleId":0,"articleSlug":"","articleTitle":"","contentType":"classifieds","tags":["classifieds"],"region":{"slug":"","geo":"","url":""},"context":null,"user":{"loggedIn":false}};</script>
+<script src="/js/exit-overlay.js?v=1786282243" defer></script>
+                             <!-- Right Sidebar  Start -->
+
+<div class="col-lg-3 video-row r-side">
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="section-tittle bww-sidebar-heading">
+            <p class="y-color bww-sidebar-heading__label">BroadwayWorld TV</p>
+        </div>     
+            
+             
+            
+          
+            
+            
+                
+
+
+  
+         
+               
+
+    
+            
+            
+            <!--  Short Video start -->
+
+ <aside>
+    
+                      <div class="d-flex short-video">
+              <div class="left-img">
+                <a href="https://www.broadwayworld.com/article/Video-Watch-LITTLE-SHOP-OF-HORRORS-THE-OUTSIDERS-More-at-Broadway-in-Bryant-Park-Week-3-20260808">
+                 <img loading="lazy" src="https://cloudimages2.broadwayworld.com/columnpiccloud/Video-BP2026week3-1786115598.jpg?format=auto&width=178" alt="Watch LITTLE SHOP OF HORRORS, THE OUTSIDERS &amp; More at Broadway in Bryant Park Week 3 Video" width="125" height="90">
+                </a>
+              </div>
+              <div class="right-cap">
+                <a class="title-16" href="https://www.broadwayworld.com/article/Video-Watch-LITTLE-SHOP-OF-HORRORS-THE-OUTSIDERS-More-at-Broadway-in-Bryant-Park-Week-3-20260808">Watch LITTLE SHOP OF HORRORS, THE OUTSIDERS &amp; More at Broadway in Bryant Park Week 3</a>
+              </div>
+            </div>
+       
+
+    
+                      <div class="d-flex short-video">
+              <div class="left-img">
+                <a href="https://www.broadwayworld.com/article/Amanda-Knox-Responds-To-Petition-Calling-For-Cancellation-Of-Edinburgh-Fringe-Show-CARTWHEEL-20260807">
+                 <img loading="lazy" src="https://cloudimages2.broadwayworld.com/columnpiccloud/Video-Amanda-Knox-to-Debut-Comedy-Show-Raising-Eyebrows-1786145557.jpg?format=auto&width=178" alt="Amanda Knox Responds To Petition Calling For Cancellation Of Edinburgh Fringe Show CARTWHE Video" width="125" height="90">
+                </a>
+              </div>
+              <div class="right-cap">
+                <a class="title-16" href="https://www.broadwayworld.com/article/Amanda-Knox-Responds-To-Petition-Calling-For-Cancellation-Of-Edinburgh-Fringe-Show-CARTWHEEL-20260807">Amanda Knox Responds To Petition Calling For Cancellation Of Edinburgh Fringe Show CARTWHEEL</a>
+              </div>
+            </div>
+       
+
+    
+                      <div class="d-flex short-video">
+              <div class="left-img">
+                <a href="https://www.broadwayworld.com/article/Video-Ellen-Greene-Unpacks-40-Years-of-Audrey-and-LITTLE-SHOP-OF-HORRORS-20260807">
+                 <img loading="lazy" src="https://cloudimages2.broadwayworld.com/columnpiccloud/Video-RTgreene-1786021585.jpg?format=auto&width=178" alt="Ellen Greene Unpacks 40 Years of Audrey and LITTLE SHOP OF HORRORS Video" width="125" height="90">
+                </a>
+              </div>
+              <div class="right-cap">
+                <a class="title-16" href="https://www.broadwayworld.com/article/Video-Ellen-Greene-Unpacks-40-Years-of-Audrey-and-LITTLE-SHOP-OF-HORRORS-20260807">Ellen Greene Unpacks 40 Years of Audrey and LITTLE SHOP OF HORRORS</a>
+              </div>
+            </div>
+       
+
+    
+                      <div class="d-flex short-video">
+              <div class="left-img">
+                <a href="https://www.broadwayworld.com/article/Video-Meet-the-Two-Rising-Stars-of-THE-SAVIORS-Ivan-HoweJulius-Rinzel-20260807">
+                 <img loading="lazy" src="https://cloudimages2.broadwayworld.com/columnpiccloud/Video-THE-SAVIORS-1786124774.jpg?format=auto&width=178" alt="Meet the Two Rising Stars of THE SAVIORS, Ivan Howe &amp; Julius Rinzel Video" width="125" height="90">
+                </a>
+              </div>
+              <div class="right-cap">
+                <a class="title-16" href="https://www.broadwayworld.com/article/Video-Meet-the-Two-Rising-Stars-of-THE-SAVIORS-Ivan-HoweJulius-Rinzel-20260807">Meet the Two Rising Stars of THE SAVIORS, Ivan Howe &amp; Julius Rinzel</a>
+              </div>
+            </div>
+       
+
+ 
+       </aside>
+       <div class="view-all">
+           <a href="https://www.broadwayworld.com/tvmainnew.php">View all Videos</a>
+       </div>
+
+
+     
+        
+                
+                 <div id='div-gpt-ad-1442371043694-CountdownClock' style='width:300px;'>
+                            <script>
+                              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1442371043694-CountdownClock'); });
+                            </script>
+                          </div>
+          
+
+            <!--  Short Video End -->
+            <div class="add-row right-ad1" style="display:block;max-width:100%;">
+<div id="ezoic-pub-ad-placeholder-106" style="text-align: center">
+
+<div id="div-gpt-ad-1442371043694-0" style="overflow:hidden;position:relative;">
+<script>googletag.cmd.push(function(){googletag.display('div-gpt-ad-1442371043694-0');});
+</script>
+</div></div>            </div>
+
+
+
+  <br>    <div class="section-tittle bww-sidebar-heading bww-ticket-central-sidebar__heading">
+        <span class="y-color bww-sidebar-heading__label">Ticket Central</span>
+    </div>
+
+    <div class="row bww-ticket-central-sidebar__body">
+        <!-- FIRST ROW for Musicals Image -->
+        <div class="row bww-ticket-central-sidebar__hero-row">
+            <div class="col-12 ticket-central-2022 bww-ticket-central-sidebar__hero">
+                <a target="_new" href="https://data.broadwayworld.com/rec/ticketcentralclick.php?tcid=232" style="font-weight:normal; font-size:14px; color:#333;">
+                    <img class="new" style="height:auto; width:100%; margin-bottom:5px;" loading="lazy" alt="Ticket Central" src="https://cloudimages2.broadwayworld.com/ticketcentral/1785787781_1200x800_TicketCentral.jpg?format=auto&width=300" width="145" height="97">
+                </a>
+            </div>
+        </div>
+
+        <!-- SECOND ROW for Plays Image -->
+        <div class="row bww-ticket-central-sidebar__hero-row">
+            <div class="col-12 ticket-central-2022 bww-ticket-central-sidebar__hero">
+                <a target="_new" href="https://data.broadwayworld.com/rec/ticketcentralclick.php?tcid=8">
+                    <img class="new" style="height:auto; width:100%; margin-bottom:5px;" loading="lazy" width="365" height="243" alt="Ticket Central" src="https://cloudimages2.broadwayworld.com/ticketcentral/1737556232_1.png?format=auto&amp;width=365?format=auto&width=365">
+                </a>
+            </div>
+        </div>
+
+        <!-- 4 logos below in 2x2 grid - first row -->
+        <div class="row" style="width:100%; margin:0;">
+            <div class="col-6" style="padding:5px; text-align:center;">
+                <a target="_new" href="https://data.broadwayworld.com/rec/ticketcentralclick.php?tcid=335226">
+                    <img style="width:100%; height:auto;" alt="Hot Show" width="300" height="200" loading="lazy" src="https://cloudimages2.broadwayworld.com/logos/918B9D9C-622C-467F-AC9384E2F00A7823.jpg?format=auto&width=300">
+                </a>
+<div style="margin-top:4px;font-size:11px;font-weight:600;color:#000;">Tickets From $59</div>            </div>
+            <div class="col-6" style="padding:5px; text-align:center;">
+                <a target="_new" href="https://data.broadwayworld.com/rec/ticketcentralclick.php?tcid=335155">
+                    <img style="width:100%; height:auto;" alt="Hot Show" width="300" height="200" loading="lazy" src="https://cloudimages2.broadwayworld.com/logos/7523C8E6-5DCF-404A-9332BDB0565CC048.jpg?format=auto&width=300">
+                </a>
+<div style="margin-top:4px;font-size:11px;font-weight:600;color:#000;">Tickets From $59</div>            </div>
+        </div>
+
+        <div class="row" style="width:100%; margin:0;">
+            <div class="col-6" style="padding:5px; text-align:center;">
+                <a target="_new" href="https://data.broadwayworld.com/rec/ticketcentralclick.php?tcid=334811">
+                    <img style="width:100%; height:auto;" alt="Hot Show" width="300" height="200" loading="lazy" src="https://cloudimages2.broadwayworld.com/logos/9E8812C5-FFFF-4039-B7CBACCEF18E0C2C.jpg?format=auto&width=300">
+                </a>
+<div style="margin-top:4px;font-size:11px;font-weight:600;color:#000;">Tickets From $59</div>            </div>
+            <div class="col-6" style="padding:5px; text-align:center;">
+                <a target="_new" href="https://data.broadwayworld.com/rec/ticketcentralclick.php?tcid=335720">
+                    <img style="width:100%; height:auto;" alt="Hot Show" width="300" height="200" loading="lazy" src="https://cloudimages2.broadwayworld.com/logos/A5E48C41-B2B2-4489-93EEB715984A6C4A.jpg?format=auto&width=300">
+                </a>
+<div style="margin-top:4px;font-size:11px;font-weight:600;color:#000;">Tickets From $71</div>            </div>
+        </div>
+    </div>
+<div class="bww-sidebar-show-actions">
+<a href="https://www.broadwayworld.com/shows/broadway-shows.php" class="bww-btn bww-btn--sm bww-btn--secondary">More Hot Shows</a>
+<a href="https://www.broadwayworld.com/shows/broadway-shows-discounts.php" class="bww-btn bww-btn--sm bww-btn--primary">Discounts</a>
+</div>                
+          
+         
+         
+            
+          
+        
+    <div class="mv_slot_target" data-slot="SidebarAtf" data-hint-slot-sizes="300x250, 300x600"></div>
+    
+     <div class="recommend-row pt-40">
+              <div class="section-tittle">
+<a href="https://www.broadwayworld.com/for-you/recommended/" class="y-color">Recommended For You</a>
+
+              </div>
+
+                  <aside aria-label="Recommended for you">
+
+        <div style="width:100%;height:460px;">
+
+<iframe scrolling="no" loading="lazy" src="https://data.broadwayworld.com/recommendednew2026.php?new=on"
+                    style="overflow:hidden;border:none;width:100%;height:460px;"
+                     title="Recommended Content"></iframe>
+</div>
+      <div class="view-all bww-section-more">
+<a href="https://www.broadwayworld.com/for-you/recommended/" class="bww-btn bww-btn--ghost bww-btn--sm bww-section-more__btn">Browse More <span class="bww-brand-mark">BWW</span> FOR YOU<img src="https://cloudimages2.broadwayworld.com/bworld1523/assets/img/svg/arrow_drop_right.svg" width="20" height="20" alt="" aria-hidden="true" class="bww-section-more__icon"></a></div>    </aside>
+
+                    </div><!-- /.recommend-row -->
+     
+
+
+            
+                <div class="sidebar-signup-ab-wrap right-sidebar-signup">
+  <aside class="bww-sidebar-newsletter" aria-label="Newsletter signup">
+    <h3 class="bww-sidebar-newsletter__title">Get daily Broadway news — just your email</h3>
+    <p class="bww-sidebar-newsletter__subtitle">Breaking Broadway news &amp; show discounts. No password required.</p>
+
+    <form action="/api/sidebar-newsletter-signup.php" method="post" class="bww-sidebar-newsletter__form" data-light-newsletter-form="1" data-sidebar-newsletter-form="1" data-nl-event-label="Sidebar Newsletter" data-ab-variant="newsletter">
+    <input type="hidden" name="region" value="1">
+    <input type="hidden" name="tracker" value="right2023">
+    <input type="hidden" name="placement" value="sidebar">
+      <label for="sidebar-newsletter-email" class="sr-only">Email</label>
+      <input type="email" id="sidebar-newsletter-email" name="email" title="subscribe bar" required class="bww-input bww-sidebar-newsletter__email" placeholder="email@example.com" value="">
+      <button type="submit" class="bww-btn bww-btn--primary bww-btn--sm bww-sidebar-newsletter__submit">Sign up</button>
+    </form>
+  </aside>
+</div>
+            
+            
+        <div class="add-row mt-4 right-ad2" style="text-align: center;">  
+<div id="ezoic-pub-ad-placeholder-108" style="width:100%;">
+<div id="div-gpt-ad-1442371043694-3" style="overflow:hidden;position:relative;padding-top:6px;">
+<script>googletag.cmd.push(function(){googletag.display('div-gpt-ad-1442371043694-3');});
+</script>
+</div>  </div>     
+
+        </div><!-- /.right-ad2 -->
+            </div><!-- /.video-row.r-side -->
+
+<div class="bww-mobile-popular-rail">
+<aside aria-label="Popular stories">
+
+     <div class="section-tittle bww-sidebar-heading bww-mobile-popular-rail__header">
+                <p class="y-color bww-sidebar-heading__label">POPULAR</p>
+              </div>
+              
+              
+              
+                
+  
+  
+
+  			  <div class="popular-single" style="text-align:left;">
+                    <a class="title-14"  href="https://www.broadwayworld.com/article/3-Broadway-Shows-Close-This-Weekend-20260808">
+<img width="178" height="100" loading="lazy" src="https://cloudimages2.broadwayworld.com/columnpiccloud/3-Broadway-Shows-Close-This-Weekend-1785852275.jpg?format=auto&width=178" srcset="https://cloudimages2.broadwayworld.com/columnpiccloud/3-Broadway-Shows-Close-This-Weekend-1785852275.jpg?format=auto&width=336 336w" alt="3 Broadway Shows Close This Weekend Photo" style="height:auto;">
+                    					<span class="number">1) </span>
+                 3 Broadway Shows Close This Weekend</a>
+                </div>
+  
+  
+  
+  
+  
+    
+  
+  
+
+  			  <div class="popular-single" style="text-align:left;">
+                    <a class="title-14"  href="https://www.broadwayworld.com/article/David-Hyde-Pierce-Danielle-Brooks-Ayo-Edebiri-and-Jin-Ha-Will-Lead-YOURE-A-GOOD-MAN-CHARLIE-BROWN-at-Encores-20260806">
+<img width="178" height="100" loading="lazy" src="https://cloudimages2.broadwayworld.com/columnpiccloud/David-Hyde-Pierce-Danielle-Brooks-Ayo-Edebiri-and-Jin-Ha-Will-Lead-YOU-RE-A-GOD-MAN-CHARLIE-BROWN-at-Encores--1786031611.jpg?format=auto&width=178" srcset="https://cloudimages2.broadwayworld.com/columnpiccloud/David-Hyde-Pierce-Danielle-Brooks-Ayo-Edebiri-and-Jin-Ha-Will-Lead-YOU-RE-A-GOD-MAN-CHARLIE-BROWN-at-Encores--1786031611.jpg?format=auto&width=336 336w" alt="David Hyde Pierce, Danielle Brooks, Ayo Edebiri and Jin Ha Will Lead YOU'RE A GOOD MAN, CH Photo" style="height:auto;">
+                    					<span class="number">2) </span>
+                 David Hyde Pierce, Danielle Brooks, Ayo Edebiri and Jin Ha Will Lead YOU'RE A GOOD MAN, CHARLIE BROWN at Encores!</a>
+                </div>
+  
+  
+  
+  
+  
+    
+  
+  
+
+  			  <div class="popular-single" style="text-align:left;">
+                    <a class="title-14"  href="https://www.broadwayworld.com/article/Exclusive-From-NEWSIES-to-Nursing-Why-Garett-Hawe-Left-Broadway-Behind-for-a-New-Career-20260805">
+<img width="178" height="100" loading="lazy" src="https://cloudimages2.broadwayworld.com/columnpiccloud/Exclusive-From-NEWSIES-to-Nursing-Why-Garett-Hawe-Left-Broadway-Behind-for-a-New-Career-1785941812.jpg?format=auto&width=178" srcset="https://cloudimages2.broadwayworld.com/columnpiccloud/Exclusive-From-NEWSIES-to-Nursing-Why-Garett-Hawe-Left-Broadway-Behind-for-a-New-Career-1785941812.jpg?format=auto&width=336 336w" alt="Exclusive: From NEWSIES to Nursing, Why Garett Hawe Left Broadway Behind for a New Career Photo" style="height:auto;">
+                    					<span class="number">3) </span>
+                 Exclusive: From NEWSIES to Nursing, Why Garett Hawe Left Broadway Behind for a New Career</a>
+                </div>
+  
+  
+  
+  
+  
+    
+  
+  
+
+  			  <div class="popular-single" style="text-align:left;">
+                    <a class="title-14"  href="https://www.broadwayworld.com/article/Exclusive-Aliya-Grace-Will-Lead-the-BOOP-National-Tour--Meet-the-Rising-Star-20260803">
+<img width="178" height="100" loading="lazy" src="https://cloudimages2.broadwayworld.com/columnpiccloud/BOOP--1785522028.jpg?format=auto&width=178" srcset="https://cloudimages2.broadwayworld.com/columnpiccloud/BOOP--1785522028.jpg?format=auto&width=336 336w" alt="Exclusive: Aliya Grace Will Lead the BOOP! National Tour- Meet the Rising Star Photo" style="height:auto;">
+                    					<span class="number">4) </span>
+                 Exclusive: Aliya Grace Will Lead the BOOP! National Tour- Meet the Rising Star</a>
+                </div>
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+</aside>
+</div><!-- /.bww-mobile-popular-rail -->
+
+          <!-- Right Sidebar  End -->
+<script>
+(function () {
+  if (!window.matchMedia || !window.matchMedia('(max-width: 1024px)').matches) return;
+  var vidRow = document.querySelector('.video-row');
+  if (!vidRow) return;
+  var recRow = vidRow.querySelector('.recommend-row');
+  if (!recRow) return;
+
+  var titles = vidRow.querySelectorAll('.section-tittle');
+  var videosTitle = null;
+  for (var i = 0; i < titles.length; i++) {
+    var p = titles[i].querySelector('p');
+    if (p && p.textContent.trim() === 'Videos') { videosTitle = titles[i]; break; }
+  }
+  if (!videosTitle) return;
+
+  var videosStart = videosTitle;
+  while (videosStart && videosStart.parentNode !== vidRow) {
+    videosStart = videosStart.parentNode;
+  }
+  if (!videosStart) return;
+
+  vidRow.insertBefore(recRow, videosStart);
+})();
+</script>
+
+          </div><!-- /.row -->
+        </div>
+      </div>
+    </main>
+
+     <footer class="bww-site-footer" aria-label="Site footer">
+      <!-- Footer Start-->
+            <div class="container">
+        <div class="bww-site-footer__ad">
+                            <div class="bww-footer-ad bww-footer-ad--mobile" id="ezoic-pub-ad-placeholder-113">
+                                <div id="div-gpt-ad-1479672818651-NEW300MOBILE"
+                                     style="width:300px;overflow:hidden;position:relative;padding-top:6px;">
+                                </div>
+                            </div>
+                        <div class="bww-footer-ad bww-footer-ad--desktop" id="ezoic-pub-ad-placeholder-112">
+                            <div id="div-gpt-ad-1479672818651-New728468Bottom">
+                            </div>
+                        </div>
+                        <script data-cfasync="false">
+                        (function () {
+                          var mobile = window.matchMedia && window.matchMedia('(max-width: 991px)').matches;
+                          var id = mobile
+                            ? 'div-gpt-ad-1479672818651-NEW300MOBILE'
+                            : 'div-gpt-ad-1479672818651-New728468Bottom';
+                          if (window.googletag && googletag.cmd) {
+                            googletag.cmd.push(function () { googletag.display(id); });
+                          }
+                        })();
+                        </script>
+            </div>
+        <div class="footer-area fix bww-site-footer__inner">
+          <div class="bww-site-footer__grid">
+            <div class="footer-logo bww-site-footer__brand">
+              <img loading="lazy" width="307" height="190" src="https://cloudimages2.broadwayworld.com/bworld1523/assets/img/footer-logo.png" alt="BroadwayWorld logo">
+            </div>
+            <div class="footer-cap text-align-right bww-site-footer__content">
+              <div class="bww-site-footer__newsletter">
+                <form action="https://www.broadwayworld.com/register.php?tracker=bottom2023" method="post" onSubmit="gtag('event', 'Register', {'event_category': 'Register','event_label': 'Bottom 2023','value': 'Bottom 2023'});">
+                  <p class="bww-site-footer__newsletter-title">Sign up for announcements and exclusive discounts on tickets to your favorite shows!</p>
+                  <div class="bww-site-footer__newsletter-row">
+                    <label class="sr-only" for="footer-email">Email</label>
+                    <input type="email" id="footer-email" name="email" title="Sign up for news" class="bww-input" placeholder="Enter your email" required autocomplete="email" inputmode="email">
+                    <button type="submit" class="bww-btn bww-btn--primary" aria-label="Sign up for news">Sign Up</button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="footer-social bww-site-footer__social">
+                <span class="bww-site-footer__social-label">Follow us</span>
+                <div class="bww-site-footer__social-links">
+                  <a href="https://www.facebook.com/broadwayworld" target="_blank" rel="noopener noreferrer" aria-label="BroadwayWorld on Facebook">
+                    <img loading="lazy" width="32" height="32" src="https://cloudimages2.broadwayworld.com/social2024/facebook300.png?format=auto&width=64" alt="">
+                  </a>
+                  <a href="https://www.instagram.com/officialbroadwayworld" target="_blank" rel="noopener noreferrer" aria-label="BroadwayWorld on Instagram">
+                    <img loading="lazy" width="32" height="32" src="https://cloudimages2.broadwayworld.com/social2024/instagram300.png?format=auto&width=64" alt="">
+                  </a>
+                  <a href="https://www.linkedin.com/company/broadwayworld-com" target="_blank" rel="noopener noreferrer" aria-label="BroadwayWorld on LinkedIn">
+                    <img loading="lazy" width="32" height="32" src="https://cloudimages2.broadwayworld.com/social2024/linkedin300.png?format=auto&width=64" alt="">
+                  </a>
+                  <a href="https://www.tiktok.com/@broadwayworld?lang=en" target="_blank" rel="noopener noreferrer" aria-label="BroadwayWorld on TikTok">
+                    <img loading="lazy" width="32" height="32" src="https://cloudimages2.broadwayworld.com/social2024/tiktok300.png?format=auto&width=64" alt="">
+                  </a>
+                  <a href="https://www.threads.net/@officialbroadwayworld" target="_blank" rel="noopener noreferrer" aria-label="BroadwayWorld on Threads">
+                    <img loading="lazy" width="32" height="32" src="https://cloudimages2.broadwayworld.com/social2024/threads300.png?format=auto&width=64" alt="">
+                  </a>
+                  <a href="https://www.youtube.com/channel/UCPkvHs1L0D71NtW_Dc15WEw" target="_blank" rel="noopener noreferrer" aria-label="BroadwayWorld on YouTube">
+                    <img loading="lazy" width="32" height="32" src="https://cloudimages2.broadwayworld.com/social2024/youtube300.png?format=auto&width=64" alt="">
+                  </a>
+                </div>
+              </div>
+
+              <nav class="footer-nav bww-site-footer__nav" aria-label="Footer navigation">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="https://www.broadwayworld.com/mediakit.php">Advertise</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://www.broadwayworld.com/about/">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://www.broadwayworld.com/contact.php">Contact</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://www.broadwayworld.com/article/Join-the-BWW-Interns-Contributors-Team-20141229">Join Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://www.broadwayworld.com/submitnews.php">Submit News</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://www.broadwayworld.com/regionalhome.php">Regions</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://www.broadwayworld.com/sitemap.php">Site Map</a></li>
+                                                                                                          </ul>
+              </nav>
+
+              <div class="footer-copy-right bww-site-footer__legal">
+                <p>&copy; 2026 &mdash; Copyright <a href="https://www.wisdomdigital.com">Wisdom Digital Media</a>, all rights reserved. <a href="https://www.broadwayworld.com/privacy/">Privacy Policy</a></p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- article header end -->
+    
+        </div>
+        <!-- Footer End-->
+    </footer>
+  
+<script data-cfasync="false" src="/bworld1523/assets/js/jquery-min.js?v=20260628"></script>
+<script data-cfasync="false" src="/bworld1523/assets/js/bootstrap.min.js?v=20260628"></script>
+
+<script data-cfasync="false" defer src="/bworld1523/assets/js/footer-init.js?v=2.1786282243"></script>
+
+
+
+
+      
+   
+   <script>
+// Replaces fbevents.js. _fbp is what Meta weighs heaviest in CAPI matching, so
+// we mint it ourselves (90d) and convert ?fbclid into _fbc on click-through.
+(function(){
+  function getC(n){return document.cookie.split('; ').find(r=>r.startsWith(n+'='))?.split('=')[1]||'';}
+  function setC(n,v){
+    var d=new Date(); d.setTime(d.getTime()+90*86400000);
+    document.cookie=n+'='+v+';expires='+d.toUTCString()+';path=/;domain=.broadwayworld.com;SameSite=Lax';
+  }
+  if(!getC('_fbp')){
+    var rnd=Math.floor(Math.random()*9000000000)+1000000000;
+    setC('_fbp','fb.1.'+Date.now()+'.'+rnd);
+  }
+  var fbclid=new URLSearchParams(window.location.search).get('fbclid');
+  if(fbclid && !getC('_fbc')) setC('_fbc','fb.1.'+Date.now()+'.'+fbclid);
+})();
+
+function uuidv4(){
+  if (window.crypto && crypto.getRandomValues) {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{
+      const r=crypto.getRandomValues(new Uint8Array(1))[0]&15, v=c==='x'?r:(r&0x3|0x8); return v.toString(16);
+    });
+  }
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{
+    const r=Math.random()*16|0, v=c==='x'?r:(r&0x3|0x8); return v.toString(16);
+  });
+}
+// Per-event IDs so browser-pixel ↔ CAPI dedup works per event_name, not per batch.
+const fbEventIds = { PageView: uuidv4(), TheatreTopicView: uuidv4() };
+
+// Build topicParams with all available variables
+const topicParams = {"region":"Broadway"};
+
+
+function getCookie(n){return document.cookie.split('; ').find(r=>r.startsWith(n+'='))?.split('=')[1]||'';}
+
+(()=>{
+  const fbp = getCookie('_fbp') || null;
+  let fbc = getCookie('_fbc') || null;
+  if (!fbc) {
+    const fbClick = getCookie('fb_click_id');
+    if (fbClick) fbc = 'fb.1.' + Math.floor(Date.now()/1000) + '.' + fbClick;
+  }
+
+  // Worker hashes + normalizes email itself and won't double-hash already-hashed values.
+  const emailCookie = getCookie('EMAIL') || null;
+
+  // Stamp once so sendBeacon on unload doesn't get re-timed by the worker.
+  const eventTime = Math.floor(Date.now() / 1000);
+
+  const payload = {
+    event_source_url: window.location.href,
+    user_data: {
+      fbp,
+      fbc,
+      ...(emailCookie ? { em: emailCookie } : {}),
+                                        },
+    events: [
+      { name: 'PageView',         event_id: fbEventIds.PageView,         event_time: eventTime, params: {} },
+      { name: 'TheatreTopicView', event_id: fbEventIds.TheatreTopicView, event_time: eventTime, params: topicParams }
+    ]
+  };
+
+  const url = '/meta_capi.php';
+  const body = JSON.stringify(payload);
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon(url, new Blob([body], {type:'application/json'}));
+  } else {
+    fetch(url, { method:'POST', headers:{'Content-Type':'application/json'}, body, keepalive: true });
+  }
+})();
+</script>
+
+</div><!-- w-container -->
+  <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a28eabf30dcc3393',t:'MTc4NjM2MTQ1OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
