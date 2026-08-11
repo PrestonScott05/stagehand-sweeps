@@ -1,0 +1,82 @@
+{
+  "scraped": "2026-08-11",
+  "sources_ok": [
+    "speedyapply",
+    "vanshb03"
+  ],
+  "source_errors": [],
+  "candidates": [
+    {
+      "company": "Microsoft",
+      "role": "Software Engineer: Intern Opportunities for University Students - CoreAI",
+      "location": "Washington, DC",
+      "comp": "$52/hr",
+      "apply_url": "https://apply.careers.microsoft.com/careers/job/1970393556951950",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "TikTok",
+      "role": "Frontend Engineer Intern - Ads Interface - 2027 Summer",
+      "location": "San Jose, CA",
+      "comp": "$60/hr",
+      "apply_url": "https://lifeattiktok.com/search/7671211313289398581",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Trillium",
+      "role": "Software Engineer Intern - Summer 2027",
+      "location": "New York City, NY",
+      "comp": null,
+      "apply_url": "https://www.trlm.com/apply/5207089007?gh_jid=5207089007",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Varda",
+      "role": "Flight Software Internship - Spring 2027",
+      "location": "El Segundo, CA",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/vardaspace/jobs/7824815003",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Varda",
+      "role": "Site Reliability Internship - Spring 2027",
+      "location": "El Segundo, CA",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/vardaspace/jobs/7824814003",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Centerfield",
+      "role": "Frontend Engineer Intern - 6 month internship",
+      "location": "Los Angeles, CA",
+      "comp": null,
+      "apply_url": "https://jobs.ashbyhq.com/centerfield/1d7eacc1-37f7-478c-9b0a-fa7974f1a9e4",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Kastle",
+      "role": "Software Engineer - Intern",
+      "location": "San Francisco, CA",
+      "comp": null,
+      "apply_url": "https://jobs.ashbyhq.com/kastle/6f32db51-de45-472f-a9c8-d9419d3634ee",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Terranova",
+      "role": "Software Engineering Intern",
+      "location": "Berkeley, CA",
+      "comp": null,
+      "apply_url": "https://jobs.ashbyhq.com/terranova/a8e5a8d2-4af3-4736-b66e-e0804447f7a0",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    }
+  ]
+}
