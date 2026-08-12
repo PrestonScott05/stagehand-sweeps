@@ -1,0 +1,82 @@
+{
+  "scraped": "2026-08-12",
+  "sources_ok": [
+    "speedyapply",
+    "vanshb03"
+  ],
+  "source_errors": [],
+  "candidates": [
+    {
+      "company": "Figma",
+      "role": "Software Engineer Intern - Winter 2027",
+      "location": "San Francisco, CA +1",
+      "comp": "$60/hr",
+      "apply_url": "https://boards.greenhouse.io/figma/jobs/6131089004?gh_jid=6131089004",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "DV Trading",
+      "role": "Software Engineer Intern - Summer 2027 - DV Commodities",
+      "location": "New York City, NY",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/dvtrading/jobs/4719119005",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Hiebing",
+      "role": "AI Agent Developer Intern",
+      "location": "Madison, WI",
+      "comp": null,
+      "apply_url": "http://hiebing.applytojob.com/apply/GYiQqWe8cL/AI-Agent-Developer-Intern",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "ING",
+      "role": "INTERNSHIP SOFTWARE ENGINEER",
+      "location": "Waco, TX +1",
+      "comp": null,
+      "apply_url": "https://ing.wd3.myworkdayjobs.com/en-US/icsgblcor/job/ACT-Amsterdam---Acanthus/INTERNSHIP-SOFTWARE-ENGINEER_REQ-10119555",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Rockwell Automation",
+      "role": "Spring 2027 Co-op - Embedded Software Engineer - January 2027 - August 2027",
+      "location": "Mayfield Heights, OH",
+      "comp": null,
+      "apply_url": "https://rockwellautomation.wd1.myworkdayjobs.com/en-US/external_rockwell_automation/job/Mayfield-Heights-Ohio-United-States/Spring-2027-Co-op--Embedded-Software-Engineer--January-2027---August-2027-_R26-3473-1",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Trillium",
+      "role": "Software Engineer Intern - Summer 2027",
+      "location": "New York City, NY",
+      "comp": null,
+      "apply_url": "https://www.trlm.com/apply/5207089007?gh_jid=5207089007",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Varda",
+      "role": "Flight Software Internship - Spring 2027",
+      "location": "El Segundo, CA",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/vardaspace/jobs/7824815003",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Varda",
+      "role": "Site Reliability Internship - Spring 2027",
+      "location": "El Segundo, CA",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/vardaspace/jobs/7824814003",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    }
+  ]
+}
