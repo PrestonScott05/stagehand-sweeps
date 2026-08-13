@@ -1,0 +1,136 @@
+{
+  "scraped": "2026-08-13",
+  "sources_ok": [
+    "speedyapply",
+    "vanshb03"
+  ],
+  "source_errors": [],
+  "candidates": [
+    {
+      "company": "Figma",
+      "role": "Software Engineer Intern - Winter 2027",
+      "location": "San Francisco, CA +1",
+      "comp": "$60/hr",
+      "apply_url": "https://boards.greenhouse.io/figma/jobs/6131089004?gh_jid=6131089004",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Salesforce",
+      "role": "Software Engineering Intern - Future Pathways",
+      "location": "California, USA +3",
+      "comp": "$54/hr",
+      "apply_url": "https://salesforce.wd12.myworkdayjobs.com/en-US/external_career_site/job/California---San-Francisco/Software-Engineering-Intern---Future-Pathways_JR355842",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Bosch",
+      "role": "Powertrain Controls Software Engineering Intern - 6-Months - Full-Time",
+      "location": "Farmington Hills, MI",
+      "comp": null,
+      "apply_url": "https://jobs.smartrecruiters.com/BoschGroup/744000142898574-powertrain-controls-software-engineering-intern-6-months-full-time-?oga=true",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Foxconn Industrial Internet USA",
+      "role": "Software Engineering Intern",
+      "location": "Houston, TX",
+      "comp": null,
+      "apply_url": "http://foxconnggroup.applytojob.com/apply/xf0soVofyI/Software-Engineering-Intern",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "PathAI",
+      "role": "Software Engineering Co-op: September - December 2026",
+      "location": "Boston, MA",
+      "comp": null,
+      "apply_url": "https://www.pathai.com/careers/8623056002?gh_jid=8623056002",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Blue Origin",
+      "role": "2026 Intern Conversion - Aerospace Software Apps Engineer I",
+      "location": "Seattle, WA +8",
+      "comp": null,
+      "apply_url": "https://blueorigin.wd5.myworkdayjobs.com/en-US/blueorigin/job/Greater-Seattle-Area/XMLNAME-2026-Intern-Conversion---Aerospace-Software-Apps-Engineer-I_R70306",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Blue Origin",
+      "role": "2026 Intern Conversion - Software Development Engineer I",
+      "location": "Seattle, WA +8",
+      "comp": null,
+      "apply_url": "https://blueorigin.wd5.myworkdayjobs.com/en-US/blueorigin/job/Greater-Seattle-Area/XMLNAME-2026-Intern-Conversion---Software-Development-Engineer-I_R70275",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "DV Trading",
+      "role": "Software Engineer Intern - Summer 2027 - DV Commodities",
+      "location": "New York City, NY",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/dvtrading/jobs/4719119005",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "General Dynamics Mission Systems",
+      "role": "Cybersecurity Software Intern Engineer",
+      "location": "Manassas, VA",
+      "comp": null,
+      "apply_url": "https://careers-gdms.icims.com/jobs/74257/cybersecurity-software-intern-engineer/job",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "HP",
+      "role": "Enterprise Operations Software Internship",
+      "location": "Spring, TX",
+      "comp": null,
+      "apply_url": "https://hp.wd5.myworkdayjobs.com/en-US/externalcareersite/job/Spring-Texas-United-States-of-America/Enterprise-Operations-Software-Internship_3167271-2",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "HP",
+      "role": "Enterprise Operations Software Internship",
+      "location": "Spring, TX",
+      "comp": null,
+      "apply_url": "https://hp.wd5.myworkdayjobs.com/en-US/exteu-ac-careersite/job/Spring-Texas-United-States-of-America/Enterprise-Operations-Software-Internship_3167271-1",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Kimley-Horn",
+      "role": "Software Developer Intern",
+      "location": "Cary, NC",
+      "comp": null,
+      "apply_url": "https://careers-kimley-horn.icims.com/jobs/25761/software-developer-intern/job",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Hiebing",
+      "role": "AI Agent Developer Intern",
+      "location": "Madison, WI",
+      "comp": null,
+      "apply_url": "http://hiebing.applytojob.com/apply/GYiQqWe8cL/AI-Agent-Developer-Intern",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "ING",
+      "role": "INTERNSHIP SOFTWARE ENGINEER",
+      "location": "Waco, TX +1",
+      "comp": null,
+      "apply_url": "https://ing.wd3.myworkdayjobs.com/en-US/icsgblcor/job/ACT-Amsterdam---Acanthus/INTERNSHIP-SOFTWARE-ENGINEER_REQ-10119555",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    }
+  ]
+}
