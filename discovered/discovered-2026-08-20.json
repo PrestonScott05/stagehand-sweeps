@@ -1,0 +1,172 @@
+{
+  "scraped": "2026-08-20",
+  "sources_ok": [
+    "speedyapply",
+    "vanshb03"
+  ],
+  "source_errors": [],
+  "candidates": [
+    {
+      "company": "Microsoft",
+      "role": "AI Software Engineering Intern",
+      "location": "Washington, DC +1",
+      "comp": "$52/hr",
+      "apply_url": "https://apply.careers.microsoft.com/careers/job/1970393556962891",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "NVIDIA",
+      "role": "NVIDIA 2027 Internships: Systems Software Engineering",
+      "location": "Santa Clara, CA",
+      "comp": "$62/hr",
+      "apply_url": "https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/NVIDIA-2027-Internships--Systems-Software-Engineering_JR2023492",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "NVIDIA",
+      "role": "NVIDIA 2027 Internships: Software Engineering",
+      "location": "Santa Clara, CA",
+      "comp": "$62/hr",
+      "apply_url": "https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/NVIDIA-2027-Internships--Software-Engineering_JR2023495",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "NVIDIA",
+      "role": "NVIDIA Spring 2027 Internships: Developer and Performance Technology",
+      "location": "Santa Clara, CA",
+      "comp": "$62/hr",
+      "apply_url": "https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/NVIDIA-Spring-2027-Internships--Developer-and-Performance-Technology_JR2023499",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Datadog",
+      "role": "Software Engineering Intern - Winter",
+      "location": "Boston, MA +1",
+      "comp": "$52/hr",
+      "apply_url": "https://careers.datadoghq.com/detail/8052095/?gh_jid=8052095",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Garda Capital Partners",
+      "role": "Software Engineer Intern",
+      "location": "New York City, NY",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/gardacp/jobs/6146213004",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Metova Federal",
+      "role": "Software Design Engineer Intern",
+      "location": "Orlando, FL",
+      "comp": null,
+      "apply_url": "https://jobs-cesi.icims.com/jobs/11204/software-design-engineer-intern/job",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Zipline",
+      "role": "Long Range Platform Embedded Firmware Intern - Summer 2027",
+      "location": "South San Francisco, CA",
+      "comp": null,
+      "apply_url": "https://www.zipline.com/open-roles?gh_jid=7891459003",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Zipline",
+      "role": "Enterprise Systems Software Engineer Intern - Spring 2027",
+      "location": "South San Francisco, CA",
+      "comp": null,
+      "apply_url": "https://www.zipline.com/open-roles?gh_jid=7893926003",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Zipline",
+      "role": "Enterprise Systems Software Engineer Intern - Spring 2027",
+      "location": "South San Francisco, CA",
+      "comp": null,
+      "apply_url": "https://www.zipline.com/open-roles?gh_jid=7886501003",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Arkansas Center for Data Sciences",
+      "role": "Align AI Software Development Intern",
+      "location": "Bentonville, AR",
+      "comp": null,
+      "apply_url": "https://jobs.lever.co/acds/5a872bb7-8d9f-46e3-9e72-f5c69445e787",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "By Light",
+      "role": "Software Design Engineer Intern",
+      "location": "Orlando, FL",
+      "comp": null,
+      "apply_url": "https://jobs-bylight.icims.com/jobs/11204/software-design-engineer-intern/job",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "ING",
+      "role": "Internship Artificial Intelligence Agent Developer",
+      "location": "Waco, TX +1",
+      "comp": null,
+      "apply_url": "https://ing.wd3.myworkdayjobs.com/en-US/icsgblcor/job/ACT-Amsterdam---Acanthus/Internship-Artificial-Intelligence-Agent-Developer_REQ-10120054",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Oracle",
+      "role": "Platform Software Engineer 1 - Full-time Intern Conversion",
+      "location": "USA",
+      "comp": null,
+      "apply_url": "https://careers.oracle.com/jobs/#en/sites/jobsearch/job/342415",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Point72",
+      "role": "Quantitative Developer Intern",
+      "location": "New York City, NY",
+      "comp": null,
+      "apply_url": "https://boards.greenhouse.io/point72/jobs/8721562002?gh_jid=8721562002",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Conagra Brands",
+      "role": "Software Development Internship - Summer 2027",
+      "location": "Omaha, NE",
+      "comp": null,
+      "apply_url": "https://conagrabrands.wd1.myworkdayjobs.com/en-US/careers_us/job/Omaha-Nebraska/Software-Development-Internship---Summer-2027_Req-039787",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Intel",
+      "role": "Software Development Graduate Intern",
+      "location": "Folsom, CA",
+      "comp": null,
+      "apply_url": "https://intel.wd1.myworkdayjobs.com/en-US/external/job/US-California-Folsom/Software-Development-Graduate-Intern_JR0285451-1",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Replit",
+      "role": "Software Engineering Intern - Summer 2027",
+      "location": "Foster City, CA",
+      "comp": null,
+      "apply_url": "https://jobs.ashbyhq.com/replit/7e0dafe8-3eec-442e-aa76-a4d84d779fb1",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    }
+  ]
+}
