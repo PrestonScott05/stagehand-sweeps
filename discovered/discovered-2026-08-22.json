@@ -1,0 +1,730 @@
+{
+  "scraped": "2026-08-22",
+  "sources_ok": [
+    "speedyapply",
+    "vanshb03"
+  ],
+  "source_errors": [],
+  "candidates": [
+    {
+      "company": "Databricks",
+      "role": "Software Engineering Intern - 2027 Start - Winter",
+      "location": "Mountain View, CA +2",
+      "comp": "$72/hr",
+      "apply_url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8732364002",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Microsoft",
+      "role": "AI Software Engineering Intern",
+      "location": "Washington, DC +1",
+      "comp": "$52/hr",
+      "apply_url": "https://apply.careers.microsoft.com/careers/job/1970393556962891",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "NVIDIA",
+      "role": "NVIDIA 2027 Internships: Systems Software Engineering",
+      "location": "Santa Clara, CA",
+      "comp": "$62/hr",
+      "apply_url": "https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/NVIDIA-2027-Internships--Systems-Software-Engineering_JR2023492",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "NVIDIA",
+      "role": "NVIDIA 2027 Internships: Software Engineering",
+      "location": "Santa Clara, CA",
+      "comp": "$62/hr",
+      "apply_url": "https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/NVIDIA-2027-Internships--Software-Engineering_JR2023495",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "NVIDIA",
+      "role": "NVIDIA Spring 2027 Internships: Developer and Performance Technology",
+      "location": "Santa Clara, CA",
+      "comp": "$62/hr",
+      "apply_url": "https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/NVIDIA-Spring-2027-Internships--Developer-and-Performance-Technology_JR2023499",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "TikTok",
+      "role": "Software Engineer Intern - TikTok Search Architecture - 2027 Fall",
+      "location": "San Jose, CA",
+      "comp": "$60/hr",
+      "apply_url": "https://lifeattiktok.com/search/7675524738811218229",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "TikTok",
+      "role": "Software Engineer Intern - TikTok Search Architecture - 2027 Summer",
+      "location": "San Jose, CA",
+      "comp": "$60/hr",
+      "apply_url": "https://lifeattiktok.com/search/7675517686256863541",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Datadog",
+      "role": "Software Engineering Intern - Winter",
+      "location": "Boston, MA +1",
+      "comp": "$52/hr",
+      "apply_url": "https://careers.datadoghq.com/detail/8052095/?gh_jid=8052095",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "TikTok",
+      "role": "Software Engineer Intern - Recommendation Infra - Performance Efficiency - 2027 Fall",
+      "location": "San Jose, CA",
+      "comp": "$60/hr",
+      "apply_url": "https://lifeattiktok.com/search/7675163472469444917",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "TikTok",
+      "role": "Software Engineer Intern - Recommendation Infra - Performance Efficiency - 2027 Summer",
+      "location": "San Jose, CA",
+      "comp": "$60/hr",
+      "apply_url": "https://lifeattiktok.com/search/7675159726676101381",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "TikTok",
+      "role": "Software Engineer Intern - TikTok Search Data Infra - 2027 Fall",
+      "location": "San Jose, CA",
+      "comp": "$60/hr",
+      "apply_url": "https://lifeattiktok.com/search/7675129440242010421",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "TikTok",
+      "role": "Software Engineer Intern - TikTok Search Data Infra - 2027 Summer",
+      "location": "San Jose, CA",
+      "comp": "$60/hr",
+      "apply_url": "https://lifeattiktok.com/search/7675128776856029445",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Phoebe",
+      "role": "Software Engineering Intern",
+      "location": "New York City, NY",
+      "comp": null,
+      "apply_url": "https://jobs.ashbyhq.com/phoebe-work/1ffe3e63-2163-447e-a8b0-1fff8b87e0ca",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Zipline",
+      "role": "Software Engineer Intern - Spring 2027",
+      "location": "South San Francisco, CA",
+      "comp": null,
+      "apply_url": "https://www.zipline.com/open-roles?gh_jid=7907191003",
+      "posted_age_days_at_scrape": 0,
+      "source": "speedyapply"
+    },
+    {
+      "company": "E-Space",
+      "role": "Embedded Software Engineering Intern",
+      "location": "Arlington, TX",
+      "comp": null,
+      "apply_url": "https://jobs.lever.co/espace/1e189295-a315-414d-8c0b-686f204e3cb3",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Eulerity",
+      "role": "Website Developer & Technical Content Marketing Intern - AI & Automation",
+      "location": "New York City, NY",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/eulerity/jobs/4706780006",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Excellus BCBS",
+      "role": "College Intern - Software Engineering - Fall 2026 - Multiple Openings",
+      "location": "Buffalo, NY +1",
+      "comp": null,
+      "apply_url": "https://lthc.wd1.myworkdayjobs.com/en-US/excellusbcbscareers/job/Rochester/College-Intern---Software-Engineering---Fall-2026--Multiple-Openings-_JR103878-2",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Fifth Third Bank",
+      "role": "Software Engineer Co-Op - Enterprise Finance Applications - Summer 2027",
+      "location": "Cincinnati, OH",
+      "comp": null,
+      "apply_url": "https://fifththird.wd5.myworkdayjobs.com/en-US/53careers/job/Cincinnati-OH/Software-Engineer-Co-Op---Enterprise-Finance-Applications---Summer-2027_R71588",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "GEICO",
+      "role": "Technology Development Program - Software Engineer Development Track - 2026 Summer Interns Only",
+      "location": "Bethesda, MD +1",
+      "comp": null,
+      "apply_url": "https://geico.wd1.myworkdayjobs.com/en-US/external/job/Bethesda-MD/Technology-Development-Program---Software-Engineer-Development-Track_R0065373",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "General Matter",
+      "role": "Summer 2027 Internship - Software Engineering",
+      "location": "Los Angeles, CA",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/generalmatter/jobs/5377118008",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "ING",
+      "role": "Internship - Artificial Intelligence Agent Developer",
+      "location": "Waco, TX +1",
+      "comp": null,
+      "apply_url": "https://ing.wd3.myworkdayjobs.com/en-US/icsgblcor/job/ACT-Amsterdam---Acanthus/Internship---Artificial-Intelligence-Agent-Developer_REQ-10120227",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "METECS",
+      "role": "Summer Software Internship",
+      "location": "Houston, TX",
+      "comp": null,
+      "apply_url": "http://metecs.applytojob.com/apply/XTBhKHIVhQ/Summer-Software-Internship",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Microchip",
+      "role": "Intern - Engineering - Device Software and Test",
+      "location": "Chandler, AZ",
+      "comp": null,
+      "apply_url": "https://microchiphr.wd5.myworkdayjobs.com/en-US/external/job/AZ---Chandler/Intern---Engineering--Device-Software-and-Test-_R3573-26",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "N1",
+      "role": "Software Engineer Intern - Backend - Rust",
+      "location": "New York City, NY",
+      "comp": null,
+      "apply_url": "https://jobs.ashbyhq.com/n1/afe7deb5-9cfd-4926-bcb4-058d418592a6",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Specialisterne",
+      "role": "Software Engineer Intern - Neurodiversity Hiring Initiative",
+      "location": "Dallas, TX",
+      "comp": null,
+      "apply_url": "http://specialisterne.applytojob.com/apply/gOkVN8zGTL/Software-Engineer-Intern-Neurodiversity-Hiring-Initiative",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Univera Healthcare",
+      "role": "College Intern - Software Engineering - Fall 2026 - Multiple Openings",
+      "location": "Buffalo, NY +1",
+      "comp": null,
+      "apply_url": "https://lthc.wd1.myworkdayjobs.com/en-US/univerahealthcarecareers/job/Rochester/College-Intern---Software-Engineering---Fall-2026--Multiple-Openings-_JR103878-1",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Zipline",
+      "role": "Software Systems Validation Intern - Spring 2027",
+      "location": "South San Francisco, CA",
+      "comp": null,
+      "apply_url": "https://www.zipline.com/open-roles?gh_jid=7893955003",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Zipline",
+      "role": "Software Systems Validation Intern - Summer 2027",
+      "location": "South San Francisco, CA",
+      "comp": null,
+      "apply_url": "https://www.zipline.com/open-roles?gh_jid=7894335003",
+      "posted_age_days_at_scrape": 1,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Copart",
+      "role": "Site Reliability Engineer Intern",
+      "location": "Dallas, TX",
+      "comp": null,
+      "apply_url": "https://copart.wd12.myworkdayjobs.com/en-US/copart/job/Dallas-TX---Headquarters/Site-Reliability-Engineer-Intern_JR110631",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Fooji",
+      "role": "Software Engineering Intern",
+      "location": "Lexington, KY",
+      "comp": null,
+      "apply_url": "https://apply.workable.com/fooji/j/6563DA99B5/",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Garda Capital Partners",
+      "role": "Software Engineer Intern",
+      "location": "New York City, NY",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/gardacp/jobs/6146213004",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Metova Federal",
+      "role": "Software Design Engineer Intern",
+      "location": "Orlando, FL",
+      "comp": null,
+      "apply_url": "https://jobs-cesi.icims.com/jobs/11204/software-design-engineer-intern/job",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Northrop Grumman",
+      "role": "2027 Intern Software Engineer",
+      "location": "Melbourne, FL",
+      "comp": null,
+      "apply_url": "https://ngc.wd1.myworkdayjobs.com/en-US/northrop_grumman_external_site/job/United-States-Florida-Melbourne/XMLNAME-2027-Intern-Software-Engineer_R10243573",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Zipline",
+      "role": "Enterprise Systems Software Engineer Intern - Spring 2027",
+      "location": "South San Francisco, CA",
+      "comp": null,
+      "apply_url": "https://www.zipline.com/open-roles?gh_jid=7893926003",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Zipline",
+      "role": "Enterprise Systems Software Engineer Intern - Summer 2027",
+      "location": "South San Francisco, CA",
+      "comp": null,
+      "apply_url": "https://www.zipline.com/open-roles?gh_jid=7886501003",
+      "posted_age_days_at_scrape": 2,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Arkansas Center for Data Sciences",
+      "role": "Align AI Software Development Intern",
+      "location": "Bentonville, AR",
+      "comp": null,
+      "apply_url": "https://jobs.lever.co/acds/5a872bb7-8d9f-46e3-9e72-f5c69445e787",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "By Light",
+      "role": "Software Design Engineer Intern",
+      "location": "Orlando, FL",
+      "comp": null,
+      "apply_url": "https://jobs-bylight.icims.com/jobs/11204/software-design-engineer-intern/job",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Draper",
+      "role": "Full Stack Web Development Co-Op - Spring 2027",
+      "location": "Cambridge, MA",
+      "comp": null,
+      "apply_url": "https://draper.wd5.myworkdayjobs.com/en-US/draper_careers/job/Cambridge-MA/Full-Stack-Web-Development-Co-Op--Spring-2027-_JR002832-1",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "PIMCO",
+      "role": "2027 Summer Intern - Technology Analyst - Software Engineering",
+      "location": "Austin, TX",
+      "comp": null,
+      "apply_url": "https://pimco.wd1.myworkdayjobs.com/en-US/pimco-careers/job/Austin-TX-USA/XMLNAME-2027-Summer-Intern---Technology-Analyst--Software-Engineering_R106745",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Point72",
+      "role": "Quantitative Developer Intern",
+      "location": "New York City, NY",
+      "comp": null,
+      "apply_url": "https://boards.greenhouse.io/point72/jobs/8721562002?gh_jid=8721562002",
+      "posted_age_days_at_scrape": 3,
+      "source": "speedyapply"
+    },
+    {
+      "company": "Vertiv",
+      "role": "Product Management Intern \ud83d\udec2",
+      "location": "Westerville, OH",
+      "comp": null,
+      "apply_url": "https://egup.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/20278933?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Vertiv",
+      "role": "Product Management Intern, MBA \ud83d\udec2",
+      "location": "Delaware, OH",
+      "comp": null,
+      "apply_url": "https://egup.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/20278958?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "The Nuclear Company",
+      "role": "AI Applied Research Intern \ud83d\udec2",
+      "location": "Washington, DC",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/thenuclearcompany/jobs/5391923008?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Teledyne Technologies Incorporated",
+      "role": "Software Engineer Intern \ud83c\uddfa\ud83c\uddf8",
+      "location": "Huntsville, AL",
+      "comp": null,
+      "apply_url": "https://flir.wd1.myworkdayjobs.com/en-US/flircareers/job/US---Huntsville-AL/NHRC-Software-Engineering-Internship--Summer-2027-_REQ36193?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Replit",
+      "role": "Software Engineering Intern",
+      "location": "Foster City, CA",
+      "comp": null,
+      "apply_url": "https://jobs.ashbyhq.com/replit/7e0dafe8-3eec-442e-aa76-a4d84d779fb1?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Raytheon",
+      "role": "Software Development Intern \ud83c\uddfa\ud83c\uddf8",
+      "location": "Tewksbury, MA",
+      "comp": null,
+      "apply_url": "https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-MA-TEWKSBURY-TB3--50-Apple-Hill-Dr--CONCORD-BLDG-Tewksbury-Tb3-300-Concord/Software-Development-Intern--Summer-2027-_01865635?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Notion",
+      "role": "Software Engineer Intern",
+      "location": "San Francisco, CANew York, NY",
+      "comp": null,
+      "apply_url": "https://jobs.ashbyhq.com/notion/3fba1c39-c5cb-47d7-9ad2-1cec4d7e9d0c?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Millennium",
+      "role": "Quantitative Developer Intern",
+      "location": "New York, NY",
+      "comp": null,
+      "apply_url": "https://career.mlp.com/careers/job/755957819661?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Millennium",
+      "role": "Applied AI Engineer Intern",
+      "location": "Miami, FL",
+      "comp": null,
+      "apply_url": "https://career.mlp.com/careers/job/755957778848?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Kastle",
+      "role": "Software Engineer Intern",
+      "location": "San Francisco, CA",
+      "comp": null,
+      "apply_url": "https://jobs.ashbyhq.com/kastle/6f32db51-de45-472f-a9c8-d9419d3634ee?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "JPMorgan Chase",
+      "role": "Quantitative Research, Asset Management Summer Analyst \ud83d\udec2",
+      "location": "New York, NY",
+      "comp": null,
+      "apply_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210774074?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "JPMorgan Chase",
+      "role": "Quantitative Research, Markets, Summer Internship - Analyst",
+      "location": "New York, NY",
+      "comp": null,
+      "apply_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210774038?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Hypercubic",
+      "role": "Software Engineering Intern",
+      "location": "San Francisco, CA",
+      "comp": null,
+      "apply_url": "https://jobs.ashbyhq.com/hypercubic/ab7a23f9-7280-4443-b442-2813dc39d490?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Humana",
+      "role": "Software Engineer Intern, CenterWell and Humana Military \ud83d\udec2",
+      "location": "Louisville, KY",
+      "comp": null,
+      "apply_url": "https://humana.wd5.myworkdayjobs.com/Humana_External_Career_Site/job/Louisville-KY/Humana-Technology-Internship---Summer-2027_R-424692-1?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "HPR",
+      "role": "FPGA Engineering Intern \ud83d\udec2",
+      "location": "Needham, MA",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/hyannisportresearch/jobs/7822801003?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Freeform",
+      "role": "Software Engineering Intern",
+      "location": "Los Angeles, CA",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/freeformfuturecorp/jobs/7872198003?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Exa",
+      "role": "Software Engineer Intern",
+      "location": "San Francisco, CA",
+      "comp": null,
+      "apply_url": "https://jobs.ashbyhq.com/exa/a9e01521-66f1-481b-89da-ec01d4620f16?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Epic Games",
+      "role": "Machine Learning Research Intern \ud83d\udec2",
+      "location": "Montreal, Canada",
+      "comp": null,
+      "apply_url": "https://www.epicgames.com/site/careers/jobs/6138140004?gh_jid=6138140004&utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Epic Games",
+      "role": "Gameplay Programmer Intern",
+      "location": "Cary, United States",
+      "comp": null,
+      "apply_url": "https://www.epicgames.com/site/careers/jobs/6141180004?gh_jid=6141180004&utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "DV Group",
+      "role": "Software Engineer Intern, Commodities",
+      "location": "New York, NY",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/dvtrading/jobs/4719119005?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Copart",
+      "role": "QA Engineering Intern",
+      "location": "Dallas, TX",
+      "comp": null,
+      "apply_url": "https://copart.wd12.myworkdayjobs.com/en-US/copart/job/Dallas-TX---Headquarters/QA-Engineering-Intern_JR109671?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "Atoms",
+      "role": "Software Engineer Intern",
+      "location": "5 locationsNew York, NYSeattle, WALos Angeles, CAMountain View, CASan Francisco, CA",
+      "comp": null,
+      "apply_url": "https://job-boards.greenhouse.io/cssmerge/jobs/8687896002?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "Product Management Intern, Global Merchant & Network Services \ud83d\udec2",
+      "location": "Phoenix, AZ",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26012148?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "AI Engineer Intern, Enterprise Technology Services \ud83d\udec2",
+      "location": "New York, NY",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011698?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "AI Engineer Intern, Enterprise Technology Services",
+      "location": "Sunrise, FL",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011745?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "AI Engineer Intern, Enterprise Technology Services \ud83d\udec2",
+      "location": "Atlanta, GA",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011796?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "AI Engineer Intern, Enterprise Technology Services \ud83d\udec2",
+      "location": "Phoenix, AZ",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26012375?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "AI Engineer Intern, Enterprise Technology Services \ud83d\udec2",
+      "location": "New York, NY",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011991?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "AI Engineer Intern, Enterprise Technology Services \ud83d\udec2",
+      "location": "Sunrise, FL",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011999?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "AI Engineer Intern, Enterprise Technology Services \ud83d\udec2",
+      "location": "Atlanta, GA",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26012000?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "AI Engineer Intern, Enterprise Technology Services \ud83d\udec2",
+      "location": "Phoenix, AZ",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26012392?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "Software Engineer Intern, Technology \ud83c\uddfa\ud83c\uddf8",
+      "location": "New York, NY",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26010970?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "Software Engineer Intern, Enterprise Technology Services \ud83d\udec2",
+      "location": "Charlotte, NC",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011679?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "Software Engineer Intern, Enterprise Technology Services \ud83d\udec2",
+      "location": "Phoenix, AZ",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011781?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "Software Engineer Intern, Enterprise Technology Services \ud83c\uddfa\ud83c\uddf8",
+      "location": "New York, NY",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011082?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "Software Engineer Intern, Enterprise Technology Services \ud83d\udec2",
+      "location": "Sunrise, FL",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011084?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "Software Engineer Intern, Enterprise Technology Services \ud83c\uddfa\ud83c\uddf8",
+      "location": "Charlotte, NC",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011987?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "Software Engineer Intern, Enterprise Technology Services \ud83d\udec2",
+      "location": "Phoenix, AZ",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011784?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "Cybersecurity Intern \ud83d\udec2",
+      "location": "Phoenix, AZ",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26012460?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    },
+    {
+      "company": "American Express",
+      "role": "Cybersecurity Intern \ud83d\udec2",
+      "location": "Phoenix, AZ",
+      "comp": null,
+      "apply_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26012462?utm_source=github-vansh-ouckah",
+      "posted_age_days_at_scrape": 1,
+      "source": "vanshb03"
+    }
+  ]
+}
